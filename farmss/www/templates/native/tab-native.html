@@ -1,0 +1,113 @@
+<ion-view class = "native">
+    <ion-content>
+        <ion-nav-bar class = "bar-positive">
+            <ion-nav-buttons side = "left">
+                <a href = "" class = "button button-icon">当阳
+                    <i class = "icon-place icon icon-right ion-ios-arrow-down"></i>
+                <a>
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side = "right">
+                <div class = "item-input-insert">
+                    <label class = "item-input-wrapper">
+                        <i class = "icon ion-ios7-search placeholder-icon">
+                            <input type = "search" placeholder = "Search">
+                        </i>
+                    </label>
+                </div>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-scroll class = "content" direction = "y">
+        <ion-scroll class = "pool" direction = "x">
+          <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+              <div class="box blue"><p>BLUE</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box yellow"><p>YELLOW</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box pink"><p>PINK</p></div>
+            </ion-slide>
+          </ion-slide-box>
+          <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+              <div class="box blue"><p>BLUE</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box yellow"><p>YELLOW</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box pink"><p>PINK</p></div>
+            </ion-slide>
+          </ion-slide-box>
+          <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+              <div class="box blue"><p>BLUE</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box yellow"><p>YELLOW</p></div>
+            </ion-slide>
+            <ion-slide>
+              <div class="box pink"><p>PINK</p></div>
+            </ion-slide>
+          </ion-slide-box>
+        </ion-scroll>
+
+        <div class = "collection">
+          <div class = "sort-header">
+            <form class = "filter-place">
+              <select>
+                <option ng-repeat = "place in places" value = "place" >{{place}}</option>
+              </select>
+            </form>
+            <form class = "filter-type">
+              <select>
+                <option ng-repeat = "type in types" value = "type">{{type}}</option>
+              </select>
+            </form>
+            <form class = "filter-sort">
+              <select>
+                <option ng-repeat = "sort in sorts" value = "sort">{{sort}}</option>
+              </select>
+            </form>
+          </div>
+          <div class = "clause">
+            <div class = "list">
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+              <a class = "item item-thumbnail-left" href = "#">
+                <img src = "img/ionic.png">
+                <h2>Pretty Hate Machine</h2>
+                <p> Nine Inch Nails</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </ion-scroll>
+    </ion-content>
+</ion-view>
