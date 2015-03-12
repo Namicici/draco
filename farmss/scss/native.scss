@@ -1,0 +1,78 @@
+$primary: #8AC007;
+$gap: 5px;
+
+.native{
+    background-color: #D5D8D2;
+    .button-place{
+        z-index: 999;
+    }
+    .content{
+        .pool{
+            //top: $gap;
+            width: 1000px;
+            .pool-item{
+                width: 130px;
+                height: 148px;
+                display: inline-block;
+                background-color: $primary;
+            }
+        }
+        .collection{
+            background-color: white;
+            .sort-header{
+                background-color: white;
+                //top: 10px;
+                width: 100%;
+                //margin: 0 3.3% 0 3.3%;
+                height: 32px;
+                border-bottom: solid 1px #CCCFCD;
+                .filter-place{
+                    width: 33%;
+                    height: 31px;
+                    display: inline-block;
+                    border-right: solid 1px;
+                    border-color: #CCCFCD;
+                    position: relative;
+                    select{
+                        border: none;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 0; left: 0; bottom: 0; right: 0;
+                    }
+                }
+                .filter-type{
+                    width: 33%;
+                    height: 31px;
+                    display: inline-block;
+                    border-right: solid 1px;
+                    border-color: #CCCFCD;
+                    position: relative;
+                    select{
+                        border: none;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 0; left: 0; bottom: 0; right: 0;
+                    }
+                }
+                .filter-sort{
+                    //width: 30%;
+                    height: 31px;
+                    display: inline-block;
+                    border: none;
+                    border-color: #CCCFCD;
+                    position: relative;
+                    select{
+                        border: none;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 0; left: 0; bottom: 0; right: 0;
+                    }
+                }
+            }
+            .clause{
+                overflow: auto;
+            }
+        }
+    }
+}
+

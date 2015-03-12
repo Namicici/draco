@@ -3,10 +3,12 @@
   "app_id": "",
   "gulpStartupTasks": [
     "sass",
+    "concat",
+    "copy",
     "watch"
   ],
   "watchPatterns": [
     "www/**/*",
-    "!www/lib/**/*"
+    "www/lib/**/*"
   ]
 }

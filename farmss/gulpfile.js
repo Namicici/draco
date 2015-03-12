@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
+var copy = require("gulp-copy");
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -11,7 +12,7 @@ var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'concat', 'copy']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -22,6 +23,19 @@ gulp.task('sass', function(done) {
     }))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
+    .on('end', done);
+});
+
+gulp.task('concat', function(done){
+  gulp.src(['./node_modules/semantic-ui-css/semantic.min.css', './node_modules/semantic-ui-icon/icon.min.js'])
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('./www/css/'))
+    .on('end', done);
+});
+
+gulp.task('copy', function(done){
+  gulp.src("./node_modules/semantic-ui-css/themes/**/*.*")
+    .pipe(gulp.dest('./www/css/themes/'))
     .on('end', done);
 });
 
