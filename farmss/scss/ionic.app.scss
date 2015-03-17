@@ -19,9 +19,11 @@ $dark:                            #444 !default;
 
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
-$positive: #5BBD72 !default;
+
+@import "customer-variables";
 
 // Include all of Ionic
+
 @import "www/lib/ionic/scss/ionic";
 @import "native";
 

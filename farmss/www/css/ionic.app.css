@@ -3174,18 +3174,18 @@ a.subdued {
     min-width: initial;
     min-height: 31px;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 32px; }
     .bar .button.button-icon:before, .bar .button .icon:before, .bar .button.icon:before, .bar .button.icon-left:before, .bar .button.icon-right:before {
       padding-right: 2px;
       padding-left: 2px;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 32px; }
     .bar .button.button-icon {
       font-size: 17px; }
       .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before {
         vertical-align: top;
-        font-size: 32px;
+        font-size: 24px;
         line-height: 32px; }
     .bar .button.button-clear {
       padding-right: 2px;
@@ -3193,7 +3193,7 @@ a.subdued {
       font-weight: 300;
       font-size: 17px; }
       .bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before {
-        font-size: 32px;
+        font-size: 24px;
         line-height: 32px; }
     .bar .button.back-button {
       display: block;
@@ -6458,17 +6458,17 @@ progress {
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0 12px;
-  min-width: 52px;
-  min-height: 47px;
+  padding: 0 8px;
+  min-width: 38px;
+  min-height: 37px;
   border-width: 1px;
   border-style: solid;
   border-radius: 2px;
   vertical-align: top;
   text-align: center;
   text-overflow: ellipsis;
-  font-size: 16px;
-  line-height: 42px;
+  font-size: 14px;
+  line-height: 32px;
   cursor: pointer; }
   .button:hover {
     color: #444;
@@ -6491,8 +6491,8 @@ progress {
     display: inline-block;
     padding: 0 0 1px 0;
     vertical-align: inherit;
-    font-size: 24px;
-    line-height: 41px;
+    font-size: 16px;
+    line-height: 31px;
     pointer-events: none; }
   .button.icon-left:before {
     float: left;
@@ -6751,25 +6751,25 @@ progress {
 
 .button-small {
   padding: 2px 4px 1px;
-  min-width: 28px;
-  min-height: 30px;
+  min-width: 24px;
+  min-height: 26px;
   font-size: 12px;
-  line-height: 26px; }
+  line-height: 22px; }
   .button-small .icon:before, .button-small.icon:before, .button-small.icon-left:before, .button-small.icon-right:before {
     font-size: 16px;
     line-height: 19px;
     margin-top: 3px; }
 
 .button-large {
-  padding: 0 16px;
-  min-width: 68px;
-  min-height: 59px;
-  font-size: 20px;
-  line-height: 53px; }
+  padding: 0 12px;
+  min-width: 52px;
+  min-height: 53px;
+  font-size: 16px;
+  line-height: 47px; }
   .button-large .icon:before, .button-large.icon:before, .button-large.icon-left:before, .button-large.icon-right:before {
     padding-bottom: 2px;
-    font-size: 32px;
-    line-height: 51px; }
+    font-size: 24px;
+    line-height: 45px; }
 
 .button-icon {
   -webkit-transition: opacity 0.1s;
@@ -6784,13 +6784,13 @@ progress {
     box-shadow: none;
     opacity: 0.3; }
   .button-icon .icon:before, .button-icon.icon:before {
-    font-size: 32px; }
+    font-size: 24px; }
 
 .button-clear {
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
   padding: 0 6px;
-  max-height: 42px;
+  max-height: 32px;
   border-color: transparent;
   background: none;
   box-shadow: none; }
@@ -7592,10 +7592,10 @@ a.button {
 
 .native {
   background-color: #D5D8D2; }
-  .native .button-place {
-    z-index: 999; }
   .native .content .pool {
-    width: 1000px; }
+    margin-top: 46px;
+    overflow: scroll;
+    white-space: nowrap; }
     .native .content .pool .pool-item {
       width: 130px;
       height: 148px;

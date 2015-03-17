@@ -1,15 +1,13 @@
 $primary: #8AC007;
-$gap: 5px;
+$gap: 2px;
 
 .native{
     background-color: #D5D8D2;
-    .button-place{
-        z-index: 999;
-    }
     .content{
         .pool{
-            //top: $gap;
-            width: 1000px;
+            margin-top: $bar-height + $gap;
+            overflow: scroll;
+            white-space: nowrap;
             .pool-item{
                 width: 130px;
                 height: 148px;
