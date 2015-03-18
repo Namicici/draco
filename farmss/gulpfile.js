@@ -11,7 +11,7 @@ var del = require('del');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  js: ['./www/js/app.js', './www/js/router.js', './www/js/controllers.js', './www/js/controllers/*.js', './www/js/directives/**/*.js']
+  js: ['./www/js/app/*.js', './www/js/app/controllers/*.js', './www/js/app/directives/**/*.js']
 };
 
 gulp.task('default', ['sass', 'scripts', 'concat', 'copy']);

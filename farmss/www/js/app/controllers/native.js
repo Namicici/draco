@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('farmss.controllers')
 
 .controller('NativeCtrl', function($scope) {
     $scope.places = ["坝陵", "半月", "河溶"];
