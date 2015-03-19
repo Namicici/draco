@@ -1,6 +1,7 @@
 <ion-view class = "native">
     <div class="bar bar-header item-input-inset bar-positive">
-        <button class="button button-clear">当阳<i class = "button-small icon-right ion-ios-arrow-down"></i></button>
+        <fs-locate items = "serviceScope"></fs-locate>
+        <!--button class="button button-clear" ng-click = "changeLocation()">当阳<i class = "button-small icon-right ion-ios-arrow-down"></i></button-->
         <label class="item-input-wrapper">
             <i class="icon icon-positive ion-ios-search-strong placeholder-icon"></i>
             <input type="search" placeholder="Search">
@@ -59,22 +60,9 @@
 
         <div class = "collection">
             <div class = "sort-header">
-                <fs-drop-down items = "places"></fs-drop-down>
-                <form class = "filter-place">
-                    <!--select class = "item-select">
-                        <option ng-repeat = "place in places" value = "place" >{{place}}</option>
-                    </select-->
-                </form>
-                <form class = "filter-type">
-                    <select>
-                        <option ng-repeat = "type in types" value = "type">{{type}}</option>
-                    </select>
-                </form>
-                <form class = "filter-sort">
-                    <select>
-                      <option ng-repeat = "sort in sorts" value = "sort">{{sort}}</option>
-                    </select>
-                </form>
+                <fs-drop-down class = "filter-place" items = "places"></fs-drop-down>
+                <fs-drop-down class = "filter-type" items = "types"></fs-drop-down>
+                <fs-drop-down class = "filter-sort" items = "sorts"></fs-drop-down>
             </div>
 
             <div class = "clause">
