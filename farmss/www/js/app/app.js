@@ -1,3 +1,3 @@
 
-angular.module('farmss', ['ionic', 'farmss.services', 'farmss.directives','farmss.controllers'])
+angular.module('farmss', ['ionic', 'farmss.constants', 'farmss.services', 'farmss.directives','farmss.controllers'])
 
