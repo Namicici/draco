@@ -23,6 +23,11 @@ angular.module('farmss.directives')
 
             initModal();
 
+            $scope.locateArea = function(area){
+                $scope.selected = area.name;
+                $scope.modal.hide();
+            };
+
             $scope.changeLocation = function(){
                 if ($scope.modal)
                     $scope.openModal = $scope.modal.show();

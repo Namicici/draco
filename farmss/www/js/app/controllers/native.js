@@ -1,7 +1,8 @@
 angular.module('farmss.controllers')
 
 .controller('NativeCtrl', function($scope, constants){
-    $scope.provinces = constants.provinceAndCityData.provinces;
+
+    $scope.provinces = constants.provinceAndcitiesData.provinces;
 
     $scope.places = ["坝陵", "半月", "河溶"];
     $scope.types = ["割谷", "耕田", "喷药"];

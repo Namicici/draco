@@ -7631,3 +7631,29 @@ a.button {
         position: relative; }
     .native .content .collection .clause {
       overflow: auto; }
+
+.fs-locate {
+  list-style: none; }
+  .fs-locate ul li {
+    margin-top: 10px;
+    display: inline-block; }
+    .fs-locate ul li .province {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #5BBD72; }
+    .fs-locate ul li ul li {
+      display: inline-block; }
+      .fs-locate ul li ul li .city {
+        margin-left: 8px;
+        font-size: 12px;
+        display: inline-block;
+        font-weight: bold;
+        color: #886aea; }
+      .fs-locate ul li ul li ul li {
+        display: inline-block; }
+        .fs-locate ul li ul li ul li .area {
+          margin-left: 8px;
+          margin-right: 10px;
+          font-size: 12px;
+          display: inline-block; }
