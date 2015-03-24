@@ -1,11 +1,11 @@
 .publish{
-    background-color: backgroundColor;
+    background-color: $backgroundColor;
     .publish-content{
         padding-left: 10px;
         padding-right: 10px;
         .photo{
             a{
-                background-color: #D5D8D2;
+                background-color: $backgroundColor;
                 margin-top: 40px;
                 margin-bottom: 10px;
                 color: $positive;
