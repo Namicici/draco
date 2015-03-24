@@ -9,7 +9,9 @@ angular.module('farmss.directives')
         },
         templateUrl: "./templates/directives/dropDown.html",
         controller: function($scope, $ionicModal){
+
             $scope.selected = $scope.items[0];
+
             initModal = function(){
                 $ionicModal.fromTemplateUrl("./templates/directives/dropDownModal.html", {
                     scope: $scope,

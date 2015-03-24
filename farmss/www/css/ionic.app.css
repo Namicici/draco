@@ -7591,10 +7591,9 @@ a.button {
   transition-duration: 0s; }
 
 .native {
-  background-color: #D5D8D2; }
+  background-color: backgroundColor; }
   .native .content .pool {
     margin-top: 49px;
-    overflow: scroll;
     white-space: nowrap; }
     .native .content .pool .pool-item {
       width: 130px;
@@ -7607,30 +7606,31 @@ a.button {
       background-color: white;
       width: 100%;
       height: 32px;
-      border-bottom: solid 1px #CCCFCD;
-      text-align: center; }
+      border-bottom: solid 1px #CCCFCD; }
       .native .content .collection .sort-header .filter-place {
-        width: 33%;
+        width: 32%;
         height: 31px;
         display: inline-block;
         border-right: solid 1px;
         border-color: #CCCFCD;
-        position: relative; }
+        position: relative;
+        text-align: center; }
       .native .content .collection .sort-header .filter-type {
-        width: 33%;
+        width: 32%;
         height: 31px;
         display: inline-block;
         border-right: solid 1px;
         border-color: #CCCFCD;
-        position: relative; }
+        position: relative;
+        text-align: center; }
       .native .content .collection .sort-header .filter-sort {
+        width: 32%;
         height: 31px;
         display: inline-block;
         border: none;
         border-color: #CCCFCD;
-        position: relative; }
-    .native .content .collection .clause {
-      overflow: auto; }
+        position: relative;
+        text-align: center; }
 
 .fs-locate {
   list-style: none; }
@@ -7657,3 +7657,58 @@ a.button {
           margin-right: 10px;
           font-size: 12px;
           display: inline-block; }
+
+.publish {
+  background-color: backgroundColor; }
+  .publish .publish-content {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .publish .publish-content .photo a {
+      background-color: #D5D8D2;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: #5BBD72;
+      height: 64px;
+      border-bottom: solid 1px #5BBD72; }
+      .publish .publish-content .photo a .camera-text {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: bold; }
+    .publish .publish-content .pub-item {
+      width: 100%;
+      height: 40px; }
+      .publish .publish-content .pub-item .pub-label {
+        width: 24%;
+        font-size: 12px;
+        font-weight: bold;
+        float: left;
+        display: inline-block;
+        padding-top: 8px; }
+      .publish .publish-content .pub-item .pub-input {
+        padding-left: 5px;
+        width: 75%;
+        float: left;
+        right: 0;
+        display: inline-block;
+        border-radius: 5px; }
+    .publish .publish-content .submit {
+      margin-top: 10px;
+      border-top: solid 1px #5BBD72;
+      float: left;
+      width: 100%; }
+
+.message {
+  background-color: #D5D8D2; }
+  .message .msg-content {
+    margin-top: 44px; }
+    .message .msg-content .status {
+      font-size: 12px;
+      font-weight: bold;
+      color: red; }
+    .message .msg-content .type {
+      font-size: 14px;
+      font-weight: bold; }
+    .message .msg-content .msg {
+      margin-top: 5px;
+      font-size: 12px;
+      color: gray; }

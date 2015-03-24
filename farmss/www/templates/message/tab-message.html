@@ -1,10 +1,27 @@
-<ion-view view-title="Message">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        <img ng-src="{{friend.face}}">
-        <h2>{{friend.name}}</h2>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+<ion-view class="message">
+    <div class="bar bar-header bar-positive"><h1 class = "title">消息</h1></div>
+
+    <ion-content class = "msg-content">
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="message in messages">
+                <img ng-src="img/{{message.img}}">
+
+                <div ng-show = "isComment('{{message.type}}')">
+                    <span class = "type">{{message.type}}</span>
+                    <div>
+                        <span class = "msg">{{message.owner}}:</span>
+                        <span class = "msg">{{message.message}}</span>
+                    </div>
+                </div>
+
+                <div ng-show = "!isComment('{{message.type}}')">
+                    <span class = "type">{{message.visitor}}</span>
+                    <span class = "status">{{message.status}}</span>
+                    <div class = "msg">{{message.message}}</div>
+                </div>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
 </ion-view>

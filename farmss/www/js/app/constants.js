@@ -2,6 +2,8 @@ angular.module("farmss.constants", [])
 
 .constant("constants", {
 
+	machineType: ["不限","割谷", "耕田", "喷药", "插秧"],
+	sortType: ["不限", "距离最近", "价格最低"],
 	provinceAndcitiesData: {"provinces":[
 		{"id":1872, "code":"420000", "name":"湖北省", "cities":[
 			{"id":1873, "code":"420100", "name":"武汉市", "areas":[

@@ -1,12 +1,12 @@
 $primary: white;//#8AC007;
 $gap: 5px;
+$borderColor: #CCCFCD;
 
 .native{
-    background-color: #D5D8D2;
+    background-color: backgroundColor;
     .content{
         .pool{
             margin-top: $bar-height + $gap;
-            overflow: scroll;
             white-space: nowrap;
             .pool-item{
                 width: 130px;
@@ -23,37 +23,36 @@ $gap: 5px;
                 width: 100%;
                 //margin: 0 3.3% 0 3.3%;
                 height: 32px;
-                border-bottom: solid 1px #CCCFCD;
-                text-align: center;
+                border-bottom: solid 1px $borderColor;
                 .filter-place{
-                    width: 33%;
+                    width: 32%;
                     height: 31px;
                     display: inline-block;
                     border-right: solid 1px;
-                    border-color: #CCCFCD;
+                    border-color: $borderColor;
                     position: relative;
-
+                    text-align: center;
                 }
                 .filter-type{
-                    width: 33%;
+                    width: 32%;
                     height: 31px;
                     display: inline-block;
                     border-right: solid 1px;
-                    border-color: #CCCFCD;
+                    border-color: $borderColor;
                     position: relative;
-
+                    text-align: center;
                 }
                 .filter-sort{
-                    //width: 30%;
+                    width: 32%;
                     height: 31px;
                     display: inline-block;
                     border: none;
-                    border-color: #CCCFCD;
+                    border-color: $borderColor;
                     position: relative;
+                    text-align: center;
                 }
             }
             .clause{
-                overflow: auto;
             }
         }
     }

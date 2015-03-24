@@ -28,6 +28,10 @@ angular.module('farmss.directives')
                 $scope.modal.hide();
             };
 
+            $scope.cancel = function(){
+                $scope.modal.hide();
+            };
+
             $scope.changeLocation = function(){
                 if ($scope.modal)
                     $scope.openModal = $scope.modal.show();

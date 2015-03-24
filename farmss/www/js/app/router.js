@@ -40,12 +40,22 @@ angular.module('farmss')
         }
     })
 
-    .state('tab.publishs', {
-        url: '/publishs',
+    .state('tab.publish', {
+        url: '/publish',
         views: {
-            'tab-publishs': {
-              templateUrl: 'templates/publish/tab-publishs.html',
-              controller: 'PublishsCtrl'
+            'tab-publish': {
+              templateUrl: 'templates/publish/tab-publish.html',
+              controller: 'PublishCtrl'
+            }
+        }
+      })
+
+    .state('tab.message', {
+        url: '/message',
+        views: {
+            'tab-message': {
+              templateUrl: 'templates/message/tab-message.html',
+              controller: 'MessageCtrl'
             }
         }
       })

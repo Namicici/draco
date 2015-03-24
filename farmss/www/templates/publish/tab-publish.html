@@ -1,0 +1,42 @@
+<ion-view class="publish">
+    <div class="bar bar-header bar-positive"><h1 class = "title">发布</h1></div>
+
+    <ion-content class = "publish-content">
+        <ion-list>
+            <div class = "photo">
+                <a class = "item item-icon-left item-icon-right" href = "#">
+                    <i class = "icon ion-camera"></i>
+                    <div class = "camera-text">给您的发布留个影吧!</div>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">主题</span>
+                <input class = "pub-input" type = "text" placeholder = "无人飞机喷药灭虫">
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">机器类型</span>
+                <fs-drop-down class = "pub-input" items = "types"></fs-drop-down>
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">价格（元/亩）</span>
+                <input class = "pub-input" type = "number" placeholder = "30">
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">开始时间</span>
+                <input class = "pub-input" type = "datetime" placeholder = "2015-01-01">
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">结束时间</span>
+                <input class = "pub-input" type = "datetime" placeholder = "2016-01-01">
+            </div>
+            <div class = "pub-item">
+                <span class = "pub-label">描述</span>
+                <textarea class = "pub-input" rows = "8" cols = "100"></textarea>
+            </div>
+            <div class = "submit">
+                <button class = "button button-block button-positive">发布</button>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
