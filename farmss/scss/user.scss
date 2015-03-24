@@ -1,0 +1,27 @@
+.user{
+    background-color: $backgroundColor;
+    .user-content{
+        background-color: $backgroundColor;
+        .user-avatar{
+            background-color: $positive;
+            height: 130px;
+            width: 100%;
+            .config{
+                width: 100%;
+                height: 30px;
+                text-align: right;
+                color: $assertive;
+            }
+            .picture{
+                text-align: center;
+                img{
+                    border-radius:150px;
+                }
+            }
+            .name{
+                text-align: center;
+            }
+
+        }
+    }
+}

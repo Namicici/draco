@@ -1,15 +1,16 @@
-<ion-view view-title="User">
-    <ion-content>
+<ion-view class = "user">
+    <ion-content class = "user-content">
+        <div class = "user-avatar">
+            <div class = "config">
+                <i class = "icon ion-ios-compose-outline"></i>
+                <i class = "icon ion-ios-gear-outline"></i>
+            </div>
+            <div class = "picture">
+                <img src = "img/user/user-64.png">
+            </div>
+            <div class = "name">Admin</div>
+        </div>
         <ion-list>
-            <ion-item class="item-toggle">
-                Enable Friends
-                <label class="toggle">
-                    <input type="checkbox" ng-model="settings.enableFriends">
-                    <div class="track">
-                        <div class="handle"></div>
-                    </div>
-                </label>
-            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>

@@ -60,6 +60,16 @@ angular.module('farmss')
         }
       })
 
+    .state('tab.user', {
+        url: '/user',
+        views: {
+            'tab-user': {
+              templateUrl: 'templates/user/tab-user.html',
+              controller: 'UserCtrl'
+            }
+        }
+      })
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/native');
 });
