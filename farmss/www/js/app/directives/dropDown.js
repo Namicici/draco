@@ -5,7 +5,8 @@ angular.module('farmss.directives')
         restrict: "EA",
         transclude: true,
         scope:{
-            items: "="
+            items: "=",
+            type: "="
         },
         templateUrl: "./templates/directives/dropDown.html",
         controller: function($scope, $ionicModal){
@@ -31,7 +32,10 @@ angular.module('farmss.directives')
             $scope.select = function(item){
                 $scope.selected = item;
                 $scope.modal.hide();
+                $scope.$emit("fs.directives.dropdown.selected", $scope.type, $scope.selected);
             };
+
+            $scope.$emit("fs.directives.dropdown.selected", $scope.type, $scope.selected);
         }
     };
 

@@ -3,7 +3,7 @@
         <fs-locate items = "provinces"></fs-locate>
         <label class="item-input-wrapper">
             <i class="icon icon-positive ion-ios-search-strong placeholder-icon"></i>
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="Search" ng-model = "searchText">
         </label>
     </div>
 
@@ -76,14 +76,14 @@
 
         <div class = "collection">
             <div class = "sort-header">
-                <fs-drop-down class = "filter-place" items = "places"></fs-drop-down>
-                <fs-drop-down class = "filter-type" items = "types"></fs-drop-down>
-                <fs-drop-down class = "filter-sort" items = "sorts"></fs-drop-down>
+                <fs-drop-down class = "filter-place" items = "places" type = "selCol.place"></fs-drop-down>
+                <fs-drop-down class = "filter-type" items = "types" type = "selCol.macType"></fs-drop-down>
+                <fs-drop-down class = "filter-sort" items = "sorts" type = "selCol.sort"></fs-drop-down>
             </div>
 
             <div class = "clause">
                 <div class = "list">
-                    <div ng-repeat = "publish in publishes">
+                    <div ng-repeat = "publish in publishes | filter: searchText | filter: selPlace | filter: macType">
                         <a class = "item item-thumbnail-left" href = "#">
                           <img src = "img/{{publish.img}}">
                           <h2>{{publish.title}}</h2>
