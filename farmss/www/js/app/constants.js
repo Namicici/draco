@@ -2,7 +2,20 @@ angular.module("farmss.constants", [])
 
 .constant("constants", {
 
-	machineType: ["不限","割谷", "耕田", "喷药", "插秧"],
+	// machineType: {
+	// 	unlimited : "不限",
+	// 	plow      : "耕田",
+	// 	reaper    : "收割",
+	// 	pesticidal: "杀虫",
+	// 	planting  : "插秧"
+	// },
+
+	// sortType: {
+	// 	unlimited: "不限",
+	// 	distance : "距离最近",
+	// 	price    : "价格最低"
+	// },
+	machineType: ["不限", "耕田", "收割", "杀虫", "插秧"],
 	sortType: ["不限", "距离最近", "价格最低"],
 	provinceAndcitiesData: {"provinces":[
 		{"id":1872, "code":"420000", "name":"湖北省", "cities":[

@@ -4,7 +4,7 @@
         background-color: $backgroundColor;
         .user-avatar{
             background-color: $positive;
-            height: 130px;
+            height: 140px;
             width: 100%;
             .config{
                 width: 100%;
@@ -19,6 +19,9 @@
                 }
             }
             .name{
+                margin-top: 8px;
+                font-size: 14px;
+                font-weight: bold;
                 text-align: center;
             }
 

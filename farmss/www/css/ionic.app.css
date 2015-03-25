@@ -7719,7 +7719,7 @@ a.button {
     background-color: #D5D8D2; }
     .user .user-content .user-avatar {
       background-color: #5BBD72;
-      height: 130px;
+      height: 140px;
       width: 100%; }
       .user .user-content .user-avatar .config {
         width: 100%;
@@ -7731,4 +7731,36 @@ a.button {
         .user .user-content .user-avatar .picture img {
           border-radius: 150px; }
       .user .user-content .user-avatar .name {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: bold;
         text-align: center; }
+
+.tab-bable li {
+  list-style: none;
+  float: left;
+  width: 33%; }
+.tab-bable a {
+  display: block;
+  text-align: center;
+  color: #70777B;
+  text-decoration: none;
+  font-size: 14px; }
+.tab-bable a.here, .tab-bable a:hover, .tab-bable a:visited {
+  text-decoration: none; }
+.tab-bable .nav-tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 15px 0 20px 0;
+  padding-bottom: 3px;
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #CCCFCD; }
+.tab-bable .nav-tabs li:hover, .tab-bable .nav-tabs > .active {
+  height: 32px;
+  border-bottom: 2px solid #919191; }
+.tab-bable .nav-tabs:after {
+  content: " ";
+  clear: both;
+  display: block; }
