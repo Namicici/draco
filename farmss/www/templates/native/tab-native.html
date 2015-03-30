@@ -76,14 +76,14 @@
 
         <div class = "collection">
             <div class = "sort-header">
-                <fs-drop-down class = "filter-place" items = "places" type = "selCol.place"></fs-drop-down>
-                <fs-drop-down class = "filter-type" items = "types" type = "selCol.macType"></fs-drop-down>
-                <fs-drop-down class = "filter-sort" items = "sorts" type = "selCol.sort"></fs-drop-down>
+                <fs-drop-down class = "filter-place" items = "places" selected = "selPlace"></fs-drop-down>
+                <fs-drop-down class = "filter-type" items = "types" selected = "selMacType"></fs-drop-down>
+                <fs-drop-down class = "filter-sort" items = "sorts" selected = "selSort"></fs-drop-down>
             </div>
 
             <div class = "clause">
                 <div class = "list">
-                    <div ng-repeat = "publish in publishes | filter: searchText | filter: selPlace | filter: macType">
+                    <div ng-repeat = "publish in publishes | filter: searchText | filter: {area: locatePlace} | filter: {village: filterPlace(selPlace)} | filter: {machineType: filterMacType(selMacType)}">
                         <a class = "item item-thumbnail-left" href = "#">
                           <img src = "img/{{publish.img}}">
                           <h2>{{publish.title}}</h2>

@@ -1,41 +1,38 @@
 angular.module('farmss.directives')
 
-.directive('fsDropDown', function(){
+.directive('fsDropDown', function($ionicModal){
     return {
         restrict: "EA",
         transclude: true,
         scope:{
             items: "=",
-            type: "="
+            selected: "="
         },
         templateUrl: "./templates/directives/dropDown.html",
-        controller: function($scope, $ionicModal){
+        link: function(scope){
 
-            $scope.selected = $scope.items[0];
+            scope.selected = scope.items[0];
 
             initModal = function(){
                 $ionicModal.fromTemplateUrl("./templates/directives/dropDownModal.html", {
-                    scope: $scope,
+                    scope: scope,
                     animation: 'slide-in-up'
                 }).then(function(modal){
-                    $scope.modal = modal;
+                    scope.modal = modal;
                 });
             };
 
             initModal();
 
-            $scope.filter = function(){
-                if ($scope.modal)
-                    $scope.openModal = $scope.modal.show();
+            scope.filter = function($event){
+                if (scope.modal)
+                    scope.openModal = scope.modal.show();
             };
 
-            $scope.select = function(item){
-                $scope.selected = item;
-                $scope.modal.hide();
-                $scope.$emit("fs.directives.dropdown.selected", $scope.type, $scope.selected);
+            scope.select = function(item){
+                scope.selected = item;
+                scope.modal.hide();
             };
-
-            $scope.$emit("fs.directives.dropdown.selected", $scope.type, $scope.selected);
         }
     };
 

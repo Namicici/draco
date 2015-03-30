@@ -10,33 +10,35 @@
                     <i class="icon ion-ios-arrow-right"></i>
                 </a>
             </div>
-            <div class = "pub-item">
-                <span class = "pub-label">主题</span>
-                <input class = "pub-input" type = "text" placeholder = "无人飞机喷药灭虫">
-            </div>
-            <div class = "pub-item">
-                <span class = "pub-label">机器类型</span>
-                <fs-drop-down class = "pub-input" items = "types"></fs-drop-down>
-            </div>
-            <div class = "pub-item">
-                <span class = "pub-label">价格（元/亩）</span>
-                <input class = "pub-input" type = "number" placeholder = "30">
-            </div>
-            <div class = "pub-item">
-                <span class = "pub-label">开始时间</span>
-                <input class = "pub-input" type = "datetime" placeholder = "2015-01-01">
-            </div>
-            <div class = "pub-item">
-                <span class = "pub-label">结束时间</span>
-                <input class = "pub-input" type = "datetime" placeholder = "2016-01-01">
-            </div>
-            <div class = "pub-item">
-                <span class = "pub-label">描述</span>
-                <textarea class = "pub-input" rows = "8" cols = "100"></textarea>
-            </div>
-            <div class = "submit">
-                <button class = "button button-block button-positive">发布</button>
-            </div>
+            <form>
+                <div class = "pub-item">
+                    <span class = "pub-label">主题</span>
+                    <input class = "pub-input" type = "text" placeholder = "无人飞机喷药灭虫" ng-model = "title">
+                </div>
+                <div class = "pub-item">
+                    <span class = "pub-label">机器类型</span>
+                    <fs-drop-down class = "pub-input" items = "types" selected = "selMacType"></fs-drop-down>
+                </div>
+                <div class = "pub-item">
+                    <span class = "pub-label">价格（元/亩）</span>
+                    <input class = "pub-input" type = "number" placeholder = "30" ng-model = "price">
+                </div>
+                <div class = "pub-item">
+                    <span class = "pub-label">开始时间</span>
+                    <input class = "pub-input" type = "datetime" placeholder = "2015-01-01" ng-model = "startTime">
+                </div>
+                <div class = "pub-item">
+                    <span class = "pub-label">结束时间</span>
+                    <input class = "pub-input" type = "datetime" placeholder = "2016-01-01" ng-model = "endTime">
+                </div>
+                <div class = "pub-item">
+                    <span class = "pub-label">描述</span>
+                    <textarea class = "pub-input" rows = "8" cols = "100" ng-model = "description"></textarea>
+                </div>
+                <div class = "submit">
+                    <button class = "button button-block button-positive" ng-click = "publish(title, selMacType, price, startTime, endTime, description)">发布</button>
+                </div>
+            </form>
         </ion-list>
     </ion-content>
 </ion-view>

@@ -22,16 +22,17 @@ angular.module('farmss.controllers')
             $scope.publishes = data;
         });
     };
+
     getAllNativePublish();
 
-    $scope.$on("fs.directives.dropdown.selected", function(scope){
+    /*$scope.$on("fs.directives.dropdown.selected", function(scope){
         var type = scope.targetScope.type;
         var selected = scope.targetScope.selected;
         if (type == $scope.selCol.place){
-            if (selected == "不限")
-                $scope.selPlace = ""
+            if (selected != "不限")
+                $scope.selPlace = selected
             else
-                $scope.selPlace = selected;
+                $scope.selPlace = "";
         }
         else if (type == $scope.selCol.macType){
             if (selected != "不限")
@@ -45,5 +46,22 @@ angular.module('farmss.controllers')
             else
                 $scope.sort = "";
         };
+    });*/
+    $scope.filterPlace = function(selPlace){
+        if (selPlace == "不限")
+            return ""
+        else
+            return selPlace;
+    };
+
+    $scope.filterMacType = function(selMacType){
+        if (selMacType == "不限")
+            return ""
+        else
+            return selMacType;
+    };
+
+    $scope.$on("fs.directives.locate.selected", function(scope){
+        $scope.locatePlace = scope.targetScope.selected.name;
     });
 })

@@ -1,6 +1,7 @@
 angular.module('farmss.services', ["ngMockE2E"])
 
 .run(function($httpBackend){
+
     $httpBackend.whenGET(/tab\//).passThrough();
     $httpBackend.whenGET(/templates\//).passThrough();
 
@@ -14,6 +15,8 @@ angular.module('farmss.services', ["ngMockE2E"])
             title: "无人飞机喷药灭虫",
             price: 20,
             img: "aircraft.jpg",
+            area: "当阳市",
+            village: "黄林村",
             publishTime: "2015-04-27",
             // startTime: "2015-05-01",
             // endTime: "2015-08-01",
@@ -78,7 +81,41 @@ angular.module('farmss.services', ["ngMockE2E"])
             // startTime: "2015-05-01",
             // endTime: "2015-08-01",
             // content: "黄林村一组卢山提供"
+        },{
+            publishId: "520",
+            // machineId: "098df0s9d8f0s8f0s9dfd",
+             machineType: "收割",
+            // ownerId: 5,
+            // owner: "XX",
+            title: "机械割谷",
+            price: 50,
+            img: "geguji.jpg",
+            area: "远安县",
+            village: "河口乡",
+            publishTime: "2015-04-27",
+            // startTime: "2015-05-01",
+            // endTime: "2015-08-01",
+            // content: "黄林村一组卢山提供"
+        },{
+            publishId: "530",
+            // machineId: "8797sdfs8009s=fsdfdfs",
+             machineType: "杀虫",
+            // ownerId: 5,
+            // owner: "XX",
+            title: "无人飞机喷药灭虫",
+            price: 30,
+            img: "aircraft2.jpg",
+            area: "远安县",
+            village: "河口乡",
+            publishTime: "2015-04-27",
+            // startTime: "2015-05-01",
+            // endTime: "2015-08-01",
+            // content: "黄林村一组李开军提供"
         }
     ];
     $httpBackend.whenGET("api/native/allpublish").respond(allNativePublish);
+    $httpBackend.when("PUT", "api/publish").respond(function(method, url, data, headers){
+        allNativePublish.push(data);
+        return allNativePublish;
+    });
 });

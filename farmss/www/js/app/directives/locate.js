@@ -10,7 +10,7 @@ angular.module('farmss.directives')
         templateUrl: "./templates/directives/locate.html",
 
         controller: function($scope, $ionicModal){
-            $scope.selected = "当阳";
+            $scope.selected = {"id":1919, "code":"420582", "name":"当阳市"};
 
             initModal = function(){
                 $ionicModal.fromTemplateUrl("./templates/directives/locationsModal.html", {
@@ -24,8 +24,9 @@ angular.module('farmss.directives')
             initModal();
 
             $scope.locateArea = function(area){
-                $scope.selected = area.name;
+                $scope.selected = area;
                 $scope.modal.hide();
+                $scope.$emit("fs.directives.locate.selected", $scope.selected);
             };
 
             $scope.cancel = function(){
@@ -37,10 +38,7 @@ angular.module('farmss.directives')
                     $scope.openModal = $scope.modal.show();
             };
 
-            $scope.select = function(item){
-                $scope.selected = item;
-                $scope.modal.hide();
-            };
+            $scope.$emit("fs.directives.locate.selected", $scope.selected);
         }
     };
 
