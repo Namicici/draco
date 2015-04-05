@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('PublishCtrl', function($scope, constants, $http){
+.controller('publishCtrl', function($scope, $rootScope, constants, $http, $location){
 
     $scope.types = constants.machineType;
     $scope.publish = function(title, selMacType, price, startTime, endTime, description){
@@ -12,6 +12,7 @@ angular.module('farmss.controllers')
         addone.price = price;
         addone.village = "黄林村",
         addone.publishTime = "2015-03-26";
+        addone.area = "当阳市";
 
         var config = {
             method: "PUT",
@@ -22,6 +23,11 @@ angular.module('farmss.controllers')
         $http(config).success(function(data){
 
         });
+
+        $rootScope.$broadcast("farmss.controllers.publishCtrl.new", addone);
+
+        $location.path("/native");
+
     };
 
 });

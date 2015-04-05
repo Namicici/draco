@@ -35,7 +35,7 @@ angular.module('farmss')
         views: {
             'tab-native': {
               templateUrl: 'templates/native/tab-native.html',
-              controller: 'NativeCtrl'
+              controller: 'nativeCtrl'
             }
         }
     })
@@ -45,7 +45,7 @@ angular.module('farmss')
         views: {
             'tab-publish': {
               templateUrl: 'templates/publish/tab-publish.html',
-              controller: 'PublishCtrl'
+              controller: 'publishCtrl'
             }
         }
       })
@@ -55,7 +55,7 @@ angular.module('farmss')
         views: {
             'tab-message': {
               templateUrl: 'templates/message/tab-message.html',
-              controller: 'MessageCtrl'
+              controller: 'messageCtrl'
             }
         }
       })
@@ -65,7 +65,7 @@ angular.module('farmss')
         views: {
             'tab-user': {
               templateUrl: 'templates/user/tab-user.html',
-              controller: 'UserCtrl'
+              controller: 'userCtrl'
             }
         }
       })

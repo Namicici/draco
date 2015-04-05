@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('NativeCtrl', function($scope, $http, constants){
+.controller('nativeCtrl', function($scope, $http, constants){
 
     $scope.provinces = constants.provinceAndcitiesData.provinces;
     $scope.types = constants.machineType;
@@ -25,28 +25,12 @@ angular.module('farmss.controllers')
 
     getAllNativePublish();
 
-    /*$scope.$on("fs.directives.dropdown.selected", function(scope){
-        var type = scope.targetScope.type;
-        var selected = scope.targetScope.selected;
-        if (type == $scope.selCol.place){
-            if (selected != "不限")
-                $scope.selPlace = selected
-            else
-                $scope.selPlace = "";
-        }
-        else if (type == $scope.selCol.macType){
-            if (selected != "不限")
-                $scope.macType = selected
-            else
-                $scope.macType = "";
-        }
-        else if (type == $scope.selCol.sort){
-            if (selected != "不限")
-                $scope.sort = selected
-            else
-                $scope.sort = "";
-        };
-    });*/
+    $scope.$on("farmss.controllers.publishCtrl.new", function(scope, data){
+        $scope.publishes.push(data);
+        //getAllNativePublish();
+        console.log($scope.publishes);
+    });
+    
     $scope.filterPlace = function(selPlace){
         if (selPlace == "不限")
             return ""
