@@ -62,6 +62,20 @@ $gap: 5px;
                 }
             }
             .clause{
+                .list{
+                    a{
+                        .location{
+                            margin-top: 10px;
+                            display: block;
+                            font-size: 12px;
+                            color: gray;
+                        }
+                        .book{
+                            display: block;
+                            float: right;
+                        }
+                    }
+                }
             }
         }
     }

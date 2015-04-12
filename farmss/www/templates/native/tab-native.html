@@ -101,10 +101,14 @@
             <div class = "clause">
                 <div class = "list">
                     <div ng-repeat = "publish in publishes | filter: searchText | filter: {area: locatePlace} | filter: {village: filterPlace(selPlace)} | filter: {machineType: filterMacType(selMacType)}">
-                        <a class = "item item-thumbnail-left" href = "#">
-                          <img src = "img/{{publish.img}}">
-                          <h2>{{publish.title}}</h2>
-                          <p>￥{{publish.price}}/亩</p>
+                        <a class = "item item-thumbnail-left" href = "#" ng-click = "detail(publish)">
+                            <img src = "img/{{publish.img}}">
+                            <h2>{{publish.title}}</h2>
+                            <div>￥{{publish.price}}/亩</div>
+                            <div class = "location">{{publish.area}}.{{publish.village}}</div>
+                            <div class = "book">
+                                <button class = "button button-positive">预约</button>
+                            </div>
                         </a>
                     </div>
                 </div>

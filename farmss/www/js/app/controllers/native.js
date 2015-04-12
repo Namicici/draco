@@ -48,4 +48,14 @@ angular.module('farmss.controllers')
     $scope.$on("fs.directives.locate.selected", function(scope){
         $scope.locatePlace = scope.targetScope.selected.name;
     });
+
+    $scope.detail = function(publish){
+        var httpConfig = {
+            method: "GET",
+            url: "api/publish/detail/" + publish.publishId
+        };
+        $http(httpConfig).success(function(data){
+            console.log(data);
+        });
+    };
 })

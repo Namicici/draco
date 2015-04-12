@@ -7606,14 +7606,22 @@ a.button {
   background-color: #D5D8D2; }
   .native .content .pool {
     margin-top: 49px;
-    white-space: nowrap; }
+    white-space: nowrap;
+    overflow: auto; }
     .native .content .pool .pool-item {
       width: 130px;
-      height: 148px;
+      height: 170px;
       display: inline-block;
       background-color: white; }
+      .native .content .pool .pool-item .pool-img {
+        height: 130px; }
+      .native .content .pool .pool-item .pool-locate {
+        height: 40px;
+        width: 100%;
+        display: inline-blck; }
   .native .content .collection {
-    background-color: white; }
+    background-color: white;
+    margin-top: 5px; }
     .native .content .collection .sort-header {
       background-color: white;
       width: 100%;
@@ -7643,6 +7651,14 @@ a.button {
         border-color: #CCCFCD;
         position: relative;
         text-align: center; }
+    .native .content .collection .clause .list a .location {
+      margin-top: 10px;
+      display: block;
+      font-size: 12px;
+      color: gray; }
+    .native .content .collection .clause .list a .book {
+      display: block;
+      float: right; }
 
 .fs-locate {
   list-style: none; }
