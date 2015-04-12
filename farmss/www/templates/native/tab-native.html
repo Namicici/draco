@@ -10,67 +10,84 @@
     <ion-content class = "content">
         <div  class = "pool" direction="x">
             <ion-list>
-                <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                    <ion-slide>
-                        <div class="box blue">
-                            <img src = "img/aircraft.jpg">
-                            <p>无人机喷药灭虫</p>
-                        </div>
-                    </ion-slide>
-                    <ion-slide>
-                        <div class="box yellow">
-                            <img src = "img/tuolaji.jpg">
-                            <p>拖拉机</p>
-                        </div>
-                    </ion-slide>
-                    <ion-slide>
-                        <div class="box pink">
-                            <img src = "img/aircraft5.jpg">
-                            <p>无人机灭虫</p>
-                        </div>
-                    </ion-slide>
-                </ion-slide-box>
-                <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                    <ion-slide>
-                        <div class="box blue">
-                            <img src = "img/aircraft2.jpg">
-                            <p>无人机灭虫</p>
-                        </div>
-                    </ion-slide>
-                    <ion-slide>
-                        <div class="box yellow">
-                            <img src = "img/aircraft4.jpg">
-                            <p>无人机灭虫</p>
-                        </div>
-                    </ion-slide>
-                    <ion-slide>
-                        <div class="box pink">
-                            <img src = "img/aircraft3.jpg">
-                            <p>无人飞机喷药</p>
-                        </div>
-                    </ion-slide>
-                </ion-slide-box>
-                <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                    <ion-slide>
-                        <div class="box blue">
-                            <img src = "img/geguji.jpg">
-                            <p>割谷</p>
-                        </div>
-                    </ion-slide>
-                    <ion-slide>
-                        <div class="box yellow">
-                            <img src = "img/chayang.jpg">
-                            <p>插秧</p>
-                        </div>
-                    </ion-slide>
-                </ion-slide-box>
-                <ion-slide-box class = "pool-item" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                    <ion-slide>
-                        <div class="box blue">
-                            <p>BLUE</p>
-                        </div>
-                    </ion-slide>
-                </ion-slide-box>
+                <div class = "pool-item">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <div class="box blue">
+                                <img src = "img/poolImg/aircraft.jpg">
+                                <div>无人机喷药灭虫</div>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box yellow">
+                                <img src = "img/poolImg/tuolaji.jpg">
+                                <div>拖拉机</div>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box pink">
+                                <img src = "img/poolImg/aircraft5.jpg">
+                                <div>无人机灭虫</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <hr/>
+                    <div class = "pool-locate">黄林村</div>
+                </div>
+                <div class = "pool-item">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <div class="box">
+                                <img src = "img/poolImg/aircraft2.jpg">
+                                <div>无人机灭虫</div>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box">
+                                <img src = "img/poolImg/aircraft4.jpg">
+                                <div>无人机灭虫</div>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box">
+                                <img src = "img/poolImg/aircraft3.jpg">
+                                <div>无人飞机喷药</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <hr/>
+                    <div class = "pool-locate">鲁山村</div>
+                </div>
+                <div class = "pool-item">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <div class="box blue">
+                                <img src = "img/poolImg/geguji.jpg">
+                                <div>割谷</div>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box yellow">
+                                <img src = "img/poolImg/chayang.jpg">
+                                <div>插秧</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <hr/>
+                    <div class = "pool-locate">许二村</div>
+                </div>
+                <div class = "pool-item">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <div class="box blue">
+                                <img src = "img/poolImg/default.jpg">
+                                <div>Add</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <hr/>
+                    <div class = "pool-locate">添加新村</div>
+                </div>
             </ion-list>
         </div>
 

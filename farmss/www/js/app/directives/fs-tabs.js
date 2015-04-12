@@ -16,7 +16,7 @@ angular.module('farmss.directives')
                 pane.selected = true;
             };
             this.addPane = function(pane){
-                if (pane.length == 0){
+                if (panes.length == 0){
                     $scope.select(pane);
                 };
                 panes.push(pane);

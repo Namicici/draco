@@ -19,6 +19,7 @@ angular.module('farmss.services', ["ngMockE2E"])
                 description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。"
             },{
                 publishId: "110",
+                img: "tuolaji.jpg",
                 like: 3,
                 comment: 3,
                 share: 1,
@@ -143,6 +144,6 @@ angular.module('farmss.services', ["ngMockE2E"])
         allNativePublish.push(data);
         return allNativePublish;
     });
-    $httpBackend.whenGET(/^\/api\/user\/alpublish\/d{1,}\//).respond(myPublish);
+    $httpBackend.whenGET("api/user/allpublish/1").respond(myPublish);
 
 });

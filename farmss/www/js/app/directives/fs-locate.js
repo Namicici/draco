@@ -7,7 +7,7 @@ angular.module('farmss.directives')
         scope:{
             items:"="
         },
-        templateUrl: "./templates/directives/locate.html",
+        templateUrl: "./templates/directives/fs-locate.html",
 
         controller: function($scope, $ionicModal){
             $scope.selected = {"id":1919, "code":"420582", "name":"当阳市"};

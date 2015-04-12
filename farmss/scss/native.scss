@@ -7,15 +7,25 @@ $gap: 5px;
         .pool{
             margin-top: $bar-height + $gap;
             white-space: nowrap;
+            overflow: auto;
             .pool-item{
                 width: 130px;
-                height: 148px;
+                height: 170px;
                 display: inline-block;
                 background-color: $primary;
+                .pool-img{
+                    height: 130px;
+                }
+                .pool-locate{
+                    height: 40px;
+                    width: 100%;
+                    display: inline-blck;
+                }
             }
         }
         .collection{
             background-color: white;
+            margin-top: $gap;
             .sort-header{
                 background-color: white;
                 //top: 10px;
