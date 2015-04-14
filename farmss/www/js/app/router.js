@@ -39,6 +39,15 @@ angular.module('farmss')
             }
         }
     })
+    .state('tab.native-detail', {
+        url: '/native/detail',
+        views:{
+            'tab-native':{
+                templateUrl: 'templates/native/native-detail.html',
+                controller: 'nativeDetailCtrl'
+            }
+        }
+    })
 
     .state('tab.publish', {
         url: '/publish',

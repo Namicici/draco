@@ -145,148 +145,130 @@ angular.module('farmss.services', ["ngMockE2E"])
         return allNativePublish;
     });
     $httpBackend.whenGET("api/user/allpublish/1").respond(myPublish);
-    $httpBackend.whenGET("api/publish/detail/::publishId").respond(function(method, url, data){
-        var detail;
-        if (publishId == "130"){
-            detail = {
-                publishId: "130",
-                machineId: "2934028340823048-203",
-                machineType: "杀虫",
-                ownerId: 1,
-                owner: "李开封",
-                like: 1,
-                comment: 5,
-                share: 10,
-                title: "无人飞机喷药灭虫",
-                price: 20,
-                img: "aircraft.jpg",
-                area: "当阳市",
-                village: "黄林村",
-                publishTime: "2015-04-27",
-                avaliableDay: 90,
-                description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。"
-            };
-        }
-        else if (publishId == "110"){
-            detail = {
-                publishId: "110",
-                machineId: "iu9r8w9r7e0w8e0r8w0er8",
-                machineType: "耕田",
-                ownerId: 1,
-                owner: "李开封",
-                like: 3,
-                comment: 3,
-                share: 1,
-                title: "机械耕田",
-                price: 30,
-                img: "tuolaji.jpg",
-                area: "当阳市",
-                village: "黄林村",
-                publishTime: "2015-04-27",
-                avaliableDay: 90,
-                description: ""
-                
-            };
-        }
-        else if (publishId == "240"){
-            detail = {
-                publishId: "240",
-                machineId: "sdnfosdofuwe0928304820",
-                machineType: "插秧",
-                ownerId: 2,
-                owner: "村组会",
-                like: 20,
-                comment: 15,
-                share: 1,
-                title: "机械插秧",
-                price: 30,
-                img: "chayang.jpg",
-                area: "当阳市",
-                village: "黄林村",
-                publishTime: "2015-04-27",
-                avaliableDay: 90,
-                description: "黄林村一组信用社提供"
-            };
-        }
-        else if (publishId == "330"){
-            detail = {
-                publishId: "330",
-                machineId: "8797sdfs8009s=fsdfdfs",
-                machineType: "杀虫",
-                ownerId: 3,
-                owner: "李开军",
-                like: 10,
-                comment: 5,
-                share: 15,
-                title: "无人飞机喷药灭虫",
-                price: 30,
-                img: "aircraft2.jpg",
-                area: "当阳市",
-                village: "黄林村",
-                publishTime: "2015-04-27",
-                avaliableDay: 60,
-                description: "黄林村一组李开军提供"
-            };
-        }
-        else if (publishId == "420"){
-            detail = {
-                publishId: "420",
-                machineId: "098df0s9d8f0s8f0s9dfd",
-                machineType: "收割",
-                ownerId: 4,
-                owner: "卢山",
-                like: 10,
-                comment: 5,
-                share: 15,
-                title: "机械割谷",
-                price: 50,
-                img: "geguji.jpg",
-                area: "当阳市",
-                village: "黄林村",
-                publishTime: "2015-04-27",
-                avaliableDay: 60,
-                description: "黄林村一组卢山提供"
-            };
-        }
-        else if (publishId == "520"){
-            detail = {
-                publishId: "520",
-                machineId: "098df0s9d8f0s8f0s9dfd",
-                machineType: "收割",
-                ownerId: 5,
-                owner: "许老三",
-                like: 10,
-                comment: 5,
-                share: 15,
-                title: "机械割谷",
-                price: 50,
-                img: "geguji.jpg",
-                area: "远安县",
-                village: "河口乡",
-                publishTime: "2015-04-27",
-                avaliableDay: 60,
-                description: "黄林村一组卢山提供"
-            };
-        }
-        else if (publishId == "530"){
-            detail = {
-                publishId: "530",
-                machineId: "8797sdfs8009s=fsdfdfs",
-                machineType: "杀虫",
-                ownerId: 5,
-                owner: "许老三",
-                like: 10,
-                comment: 5,
-                share: 15,
-                title: "无人飞机喷药灭虫",
-                price: 30,
-                img: "aircraft2.jpg",
-                area: "远安县",
-                village: "河口乡",
-                publishTime: "2015-04-27",
-                avaliableDay: 60,
-                description: "黄林村一组李开军提供"
-            };
-        };
+    $httpBackend.whenGET("api/publish/detail/130").respond({
+        publishId: "130",
+        machineId: "2934028340823048-203",
+        machineType: "杀虫",
+        ownerId: 1,
+        owner: "李开封",
+        like: 1,
+        comment: 5,
+        share: 10,
+        title: "无人飞机喷药灭虫",
+        price: 20,
+        img: "aircraft.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2015-04-27",
+        avaliableDay: 90,
+        description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。"
+    });
+    $httpBackend.whenGET("api/publish/detail/110").respond({
+        publishId: "110",
+        machineId: "iu9r8w9r7e0w8e0r8w0er8",
+        machineType: "耕田",
+        ownerId: 1,
+        owner: "李开封",
+        like: 3,
+        comment: 3,
+        share: 1,
+        title: "机械耕田",
+        price: 30,
+        img: "tuolaji.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2015-04-27",
+        avaliableDay: 90,
+        description: ""                
+    });
+    $httpBackend.whenGET("api/publish/detail/240").respond({
+        publishId: "240",
+        machineId: "sdnfosdofuwe0928304820",
+        machineType: "插秧",
+        ownerId: 2,
+        owner: "村组会",
+        like: 20,
+        comment: 15,
+        share: 1,
+        title: "机械插秧",
+        price: 30,
+        img: "chayang.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2015-04-27",
+        avaliableDay: 90,
+        description: "黄林村一组信用社提供"
+    });
+    $httpBackend.whenGET("api/publish/detail/330").respond({
+        publishId: "330",
+        machineId: "8797sdfs8009s=fsdfdfs",
+        machineType: "杀虫",
+        ownerId: 3,
+        owner: "李开军",
+        like: 10,
+        comment: 5,
+        share: 15,
+        title: "无人飞机喷药灭虫",
+        price: 30,
+        img: "aircraft2.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2015-04-27",
+        avaliableDay: 60,
+        description: "黄林村一组李开军提供"
+    });
+    $httpBackend.whenGET("api/publish/detail/420").respond({
+        publishId: "420",
+        machineId: "098df0s9d8f0s8f0s9dfd",
+        machineType: "收割",
+        ownerId: 4,
+        owner: "卢山",
+        like: 10,
+        comment: 5,
+        share: 15,
+        title: "机械割谷",
+        price: 50,
+        img: "geguji.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2015-04-27",
+        avaliableDay: 60,
+        description: "黄林村一组卢山提供"
+    });
+    $httpBackend.whenGET("api/publish/detail/520").respond({
+        publishId: "520",
+        machineId: "098df0s9d8f0s8f0s9dfd",
+        machineType: "收割",
+        ownerId: 5,
+        owner: "许老三",
+        like: 10,
+        comment: 5,
+        share: 15,
+        title: "机械割谷",
+        price: 50,
+        img: "geguji.jpg",
+        area: "远安县",
+        village: "河口乡",
+        publishTime: "2015-04-27",
+        avaliableDay: 60,
+        description: "黄林村一组卢山提供"
+    });
+    $httpBackend.whenGET("api/publish/detail/530").respond({
+        publishId: "530",
+        machineId: "8797sdfs8009s=fsdfdfs",
+        machineType: "杀虫",
+        ownerId: 5,
+        owner: "许老三",
+        like: 10,
+        comment: 5,
+        share: 15,
+        title: "无人飞机喷药灭虫",
+        price: 30,
+        img: "aircraft2.jpg",
+        area: "远安县",
+        village: "河口乡",
+        publishTime: "2015-04-27",
+        avaliableDay: 60,
+        description: "黄林村一组李开军提供"
     });
 });

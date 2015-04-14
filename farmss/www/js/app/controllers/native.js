@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('nativeCtrl', function($scope, $http, constants){
+.controller('nativeCtrl', function($scope, $http, constants, $location){
 
     $scope.provinces = constants.provinceAndcitiesData.provinces;
     $scope.types = constants.machineType;
@@ -27,7 +27,6 @@ angular.module('farmss.controllers')
 
     $scope.$on("farmss.controllers.publishCtrl.new", function(scope, data){
         $scope.publishes.push(data);
-        //getAllNativePublish();
         console.log($scope.publishes);
     });
     
@@ -55,7 +54,8 @@ angular.module('farmss.controllers')
             url: "api/publish/detail/" + publish.publishId
         };
         $http(httpConfig).success(function(data){
-            console.log(data);
+            $scope.currentPublish = data;
+            $location.path("/native/detail/");
         });
     };
 })
