@@ -1,9 +1,32 @@
-<ion-view view-title="详情">
+<ion-view view-title="详情" class = "publish-detail">
     <ion-nav-bar class="bar-positive">
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
-	<ion-content>
-		native detail
+	<ion-content class = "content">
+		<ion-slide-box>
+			<ion-slide>
+				<div class = "detail-img">
+					<img src = "img/aircraft.jpg"/>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class = "detail-img">
+					<img src = "img/aircraft2.jpg"/>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class = "detail-img">
+					<img src = "img/aircraft5.jpg"/>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+        <div class = "simple-info">
+            <div>￥{{currentPublish.price}}/亩</div>
+        </div>
+        <div class = "owner-info"></div>
+        <div class = "description"></div>
+        <div class = "location"></div>
+        <div class = "comments"></div>
 	</ion-content>
 </ion-view>

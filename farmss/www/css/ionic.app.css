@@ -7793,3 +7793,14 @@ a.button {
   clear: both;
   display: block; }
 
+.publish-detail .content .detail-img {
+  height: 300px;
+  width: 100%;
+  background-color: gray; }
+.publish-detail .content .simple-info {
+  height: 40px;
+  background-color: gray;
+  border-bottom: solid 1px #5BBD72; }
+.publish-detail .content .owner-info {
+  height: 64px;
+  background-color: #5BBD72; }

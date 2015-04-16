@@ -1,0 +1,18 @@
+.publish-detail{
+    .content{
+        .detail-img{
+        	height: 300px;
+        	width: 100%;
+        	background-color: gray;
+        }
+        .simple-info{
+            height: 40px;
+            background-color: gray;
+            border-bottom: solid 1px $positive;
+        }
+        .owner-info{
+            height: 64px;
+            background-color: $positive;
+        }
+    }
+}
