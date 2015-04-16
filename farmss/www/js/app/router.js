@@ -39,8 +39,8 @@ angular.module('farmss')
             }
         }
     })
-    .state('tab.native-detail', {
-        url: '/native/detail',
+    .state('tab.detail', {
+        url: '/detail',
         views:{
             'tab-native':{
                 templateUrl: 'templates/native/native-detail.html',

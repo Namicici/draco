@@ -29,7 +29,7 @@ angular.module('farmss.controllers')
         $scope.publishes.push(data);
         console.log($scope.publishes);
     });
-    
+
     $scope.filterPlace = function(selPlace){
         if (selPlace == "不限")
             return ""
@@ -55,7 +55,7 @@ angular.module('farmss.controllers')
         };
         $http(httpConfig).success(function(data){
             $scope.currentPublish = data;
-            $location.path("/native/detail/");
+            $location.path("/detail");
         });
     };
 })

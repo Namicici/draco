@@ -100,8 +100,9 @@
 
             <div class = "clause">
                 <div class = "list">
-                    <div ng-repeat = "publish in publishes | filter: searchText | filter: {area: locatePlace} | filter: {village: filterPlace(selPlace)} | filter: {machineType: filterMacType(selMacType)}" href="#/native/detail">
-                        <a class = "item item-thumbnail-left" ng-click = "detail(publish)">
+                    <div ng-repeat = "publish in publishes | filter: searchText | filter: {area: locatePlace} | filter: {village: filterPlace(selPlace)} | filter: {machineType: filterMacType(selMacType)}">
+                        <ion-nav-view name="native-detail"></ion-nav-view>
+                        <a class = "item item-thumbnail-left" href="#/tab/detail">
                             <img src = "img/{{publish.img}}">
                             <h2>{{publish.title}}</h2>
                             <div>￥{{publish.price}}/亩</div>
