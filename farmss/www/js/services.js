@@ -11,7 +11,7 @@ angular.module('farmss.services', ["ngMockE2E"])
             {
                 publishId: "130",
                 like: 1,
-                comment: 5,
+                comment: 2,
                 share: 10,
                 title: "无人飞机喷药灭虫",
                 img: "aircraft.jpg",
@@ -152,7 +152,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 1,
         owner: "李开封",
         like: 1,
-        comment: 5,
+        comment: 2,
         share: 10,
         title: "无人飞机喷药灭虫",
         price: 20,
@@ -161,7 +161,22 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "黄林村",
         publishTime: "2015-04-27",
         avaliableDay: 90,
-        description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。"
+        description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。",
+        commentDetail:[
+            {
+                visitorId: 3,
+                visitorName: "李开军",
+                date: "2015-05-01",
+                time: "12:00",
+                words: "快速高效省力！"
+            },{
+                visitorId: 4,
+                visitorName: "卢山",
+                date: "2015-08-15",
+                time: "13:00",
+                words: "非常省事儿！"
+            }
+        ]
     });
     $httpBackend.whenGET("api/publish/detail/110").respond({
         publishId: "110",
@@ -179,7 +194,28 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "黄林村",
         publishTime: "2015-04-27",
         avaliableDay: 90,
-        description: ""                
+        description: "",
+        commentDetail: [
+            {
+                visitorId: 3,
+                visitorName: "李开军",
+                date: "2014-12-01",
+                time: "16:45",
+                words: "5亩地有便宜的么？"
+            },{
+                visitorId: 1,
+                visitorName: "李开封",
+                date: "2014-12-01",
+                time: "17:00",
+                words: "130不能再砍价了！"
+            },{
+                visitorId: 3,
+                visitorName: "李开军",
+                date: "2014-12-01",
+                time: "17:05",
+                words: "OK!"
+            }
+        ]               
     });
     $httpBackend.whenGET("api/publish/detail/240").respond({
         publishId: "240",
@@ -188,7 +224,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 2,
         owner: "村组会",
         like: 20,
-        comment: 15,
+        comment: 0,
         share: 1,
         title: "机械插秧",
         price: 30,
@@ -197,7 +233,8 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "黄林村",
         publishTime: "2015-04-27",
         avaliableDay: 90,
-        description: "黄林村一组信用社提供"
+        description: "黄林村一组信用社提供",
+        commentDetail:[]
     });
     $httpBackend.whenGET("api/publish/detail/330").respond({
         publishId: "330",
@@ -206,7 +243,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 3,
         owner: "李开军",
         like: 10,
-        comment: 5,
+        comment: 0,
         share: 15,
         title: "无人飞机喷药灭虫",
         price: 30,
@@ -215,7 +252,8 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "黄林村",
         publishTime: "2015-04-27",
         avaliableDay: 60,
-        description: "黄林村一组李开军提供"
+        description: "黄林村一组李开军提供",
+        commentDetail:[]
     });
     $httpBackend.whenGET("api/publish/detail/420").respond({
         publishId: "420",
@@ -224,7 +262,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 4,
         owner: "卢山",
         like: 10,
-        comment: 5,
+        comment: 0,
         share: 15,
         title: "机械割谷",
         price: 50,
@@ -233,7 +271,8 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "黄林村",
         publishTime: "2015-04-27",
         avaliableDay: 60,
-        description: "黄林村一组卢山提供"
+        description: "黄林村一组卢山提供",
+        commentDetail:[]
     });
     $httpBackend.whenGET("api/publish/detail/520").respond({
         publishId: "520",
@@ -242,7 +281,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 5,
         owner: "许老三",
         like: 10,
-        comment: 5,
+        comment: 0,
         share: 15,
         title: "机械割谷",
         price: 50,
@@ -251,7 +290,8 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "河口乡",
         publishTime: "2015-04-27",
         avaliableDay: 60,
-        description: "黄林村一组卢山提供"
+        description: "黄林村一组卢山提供",
+        commentDetail:[]
     });
     $httpBackend.whenGET("api/publish/detail/530").respond({
         publishId: "530",
@@ -260,7 +300,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         ownerId: 5,
         owner: "许老三",
         like: 10,
-        comment: 5,
+        comment: 0,
         share: 15,
         title: "无人飞机喷药灭虫",
         price: 30,
@@ -269,6 +309,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         village: "河口乡",
         publishTime: "2015-04-27",
         avaliableDay: 60,
-        description: "黄林村一组李开军提供"
+        description: "黄林村一组李开军提供",
+        commentDetail:[]
     });
 });

@@ -1,18 +1,45 @@
 .publish-detail{
+    background-color: $backgroundColor;
     .content{
         .detail-img{
         	height: 300px;
-        	width: 100%;
-        	background-color: gray;
+        	width: 100%;            
         }
         .simple-info{
-            height: 40px;
-            background-color: gray;
+            background-color: white;
+            height: 32px;
             border-bottom: solid 1px $positive;
+            .simple-info-text{
+                padding: 8px 8px;
+            }
         }
         .owner-info{
             height: 64px;
-            background-color: $positive;
+        }
+        .description{
+            background-color: white;
+            margin-top: 12px;
+            padding: 8px 5px;
+        }
+        .location{
+            background-color: white;
+            padding: 5px 5px;
+            .location-text{
+                background-color: $stable;
+                height: 20px;
+                border-radius: 3px;
+                white-space: nowrap;
+                padding: 2px 5px;
+            }
+        }
+        .comments{
+            background-color: white;
+            margin-top: 5px;
+            .msg-title{
+                height: 32px;
+                margin:8px 8px;
+                padding: 8px 8px;
+            }
         }
     }
 }
