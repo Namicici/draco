@@ -7763,6 +7763,13 @@ a.button {
         font-size: 14px;
         font-weight: bold;
         text-align: center; }
+    .user .user-content .price {
+      color: red; }
+    .user .user-content .customer-info {
+      padding: 8px 8px;
+      background-color: white;
+      font-size: 12px;
+      color: gray; }
 
 .tab-bable li {
   list-style: none;

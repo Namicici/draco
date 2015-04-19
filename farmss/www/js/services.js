@@ -312,4 +312,60 @@ angular.module('farmss.services', ["ngMockE2E"])
         description: "黄林村一组李开军提供",
         commentDetail:[]
     });
+
+    var subscribed = {
+        ownerId: 1,
+        publish:[
+            {
+                publishId: "130",
+                title: "无人飞机喷药灭虫",
+                img: "aircraft.jpg",
+                price: 20,
+                publishTime: "2015-04-27",
+                description: "由当阳明辉信用合作社提供无人飞机和操作人员，并统一配药，预约达到10亩适用。",
+
+                customerId: 3,
+                customer: "李开军",
+                phone: "13718087410",
+                address: "当阳市坝陵办事处黄林村一组",
+                commentDetail: "操作熟练！快速高效！"
+
+            },{
+                publishId: "110",
+                img: "tuolaji.jpg",
+                price: 30,
+                title: "机械耕田",
+                publishTime: "2015-04-27",
+                description: "",
+
+                customerId: 4,
+                customer: "卢山",
+                phone: "13798967410",
+                address: "当阳市坝陵办事处黄林村一组",
+                commentDetail: ""
+            }
+        ]
+    }
+
+    $httpBackend.whenGET("api/user/allSubscribed/1").respond(subscribed);
+
+    $httpBackend.whenGET("api/user/allOverdue/1").respond([{
+        publishId: "120",
+        machineId: "wueouweorhkjdf",
+        machineType: "收割",
+        ownerId: 1,
+        owner: "李开封",
+        like: 3,
+        comment: 0,
+        share: 4,
+        title: "机械收割",
+        price: 50,
+        img: "geguji.jpg",
+        area: "当阳市",
+        village: "黄林村",
+        publishTime: "2014-01-01",
+        avaliableDay: 60,
+        description: "",
+        commentDetail: []
+    }]);
 });
