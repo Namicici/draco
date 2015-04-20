@@ -7619,6 +7619,10 @@ a.button {
         height: 40px;
         width: 100%;
         display: inline-blck; }
+      .native .content .pool .pool-item .box img {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 110px; }
   .native .content .collection {
     background-color: white;
     margin-top: 5px; }
