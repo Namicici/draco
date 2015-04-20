@@ -20,14 +20,14 @@
                 <div ng-repeat = "subscribe in subscribedPublish">
                     <div class = "item item-thumbnail-left" href="#">
                         <img src = "img/{{subscribe.img}}">
-                        <h2>{{subscribe.title}}</h2>
+                        <div class = "title">{{subscribe.title}}</div>
                         <div class = "price">￥{{subscribe.price}}/亩</div>
-                        <p>{{subscribe.description}}</P>
+                        <div class = "text">{{subscribe.description}}</div>
                     </div>
                     <div class = "customer-info">
-                        <div>预约人: {{subscribe.customer}}</div>
-                        <div>{{subscribe.address}}</div>
-                        <div>{{subscribe.phone}}</div>
+                        <div class = "text">预约人: {{subscribe.customer}}</div>
+                        <div class = "text">{{subscribe.address}}</div>
+                        <div class = "text">{{subscribe.phone}}</div>
                     </div>
                 </div>
             </fs-pane>
@@ -35,9 +35,9 @@
                 <div ng-repeat = "overdue in overduePublish">
                     <div class = "item item-thumbnail-left" href="#">
                         <img src = "img/{{overdue.img}}">
-                        <h2>{{overdue.title}}</h2>
+                        <div class = "title">{{overdue.title}}</div>
                         <div class = "price">￥{{overdue.price}}/亩</div>
-                        <p>{{overdue.description}}</P>
+                        <div class = "text">{{overdue.description}}</div>
                     </div>
                 </div>
             </fs-pane>

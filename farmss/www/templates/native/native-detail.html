@@ -27,13 +27,13 @@
 			</ion-slide>
 		</ion-slide-box>
         <div class = "simple-info">
-            <div class = "simple-info-text">￥{{currentPublish.price}}/亩</div>
+            <div class = "price">￥{{currentPublish.price}}/亩</div>
         </div>
         <div class = "owner-info">
             <a class="item item-avatar" href="#">
                 <img src="img/user/{{currentPublish.ownerId}}-32.png">
-                <h2>{{currentPublish.owner}}</h2>
-                <p>{{currentPublish.area}}</p>
+                <div class = "title">{{currentPublish.owner}}</div>
+                <div class = "text">{{currentPublish.area}}</div>
             </a>
         </div>
         <div class = "description">
@@ -45,12 +45,12 @@
             </span>
         </div>
         <div class = "comments" ng-if = "currentPublish.commentDetail.length > 0">
-            <div class = "msg-title">留言</div>
+            <div class = "title">留言</div>
             <div ng-repeat = "comment in currentPublish.commentDetail">
                 <a class = "item item-avatar" href = "#">
                     <img src = "img/user/{{comment.visitorId}}-32.png">
-                    <h2>{{comment.visitorName}}</h2>
-                    <p>{{comment.words}}</p>
+                    <div class = "title">{{comment.visitorName}}</div>
+                    <div class = "text">{{comment.words}}</div>
                 </a>
             </div>
         </div>

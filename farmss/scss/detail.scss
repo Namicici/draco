@@ -3,13 +3,13 @@
     .content{
         .detail-img{
         	height: 300px;
-        	width: 100%;            
+        	width: 100%;
         }
         .simple-info{
             background-color: white;
             height: 32px;
             border-bottom: solid 1px $positive;
-            .simple-info-text{
+            .price{
                 padding: 8px 8px;
             }
         }
@@ -35,7 +35,7 @@
         .comments{
             background-color: white;
             margin-top: 5px;
-            .msg-title{
+            .title{
                 height: 32px;
                 margin:8px 8px;
                 padding: 8px 8px;

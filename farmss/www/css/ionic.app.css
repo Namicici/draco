@@ -7602,6 +7602,18 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.title {
+  font-size: 14px; }
+
+.text {
+  font-size: 12px;
+  margin: 2px 2px; }
+
+.price {
+  color: red;
+  font-size: 12px;
+  margin: 2px 2px; }
+
 .native {
   background-color: #D5D8D2; }
   .native .content .pool {
@@ -7663,6 +7675,8 @@ a.button {
     .native .content .collection .clause .list a .book {
       display: block;
       float: right; }
+    .native .content .collection .clause .list a .price {
+      margin-top: 5px; }
 
 .fs-locate {
   list-style: none; }
@@ -7813,7 +7827,7 @@ a.button {
     background-color: white;
     height: 32px;
     border-bottom: solid 1px #5BBD72; }
-    .publish-detail .content .simple-info .simple-info-text {
+    .publish-detail .content .simple-info .price {
       padding: 8px 8px; }
   .publish-detail .content .owner-info {
     height: 64px; }
@@ -7833,7 +7847,7 @@ a.button {
   .publish-detail .content .comments {
     background-color: white;
     margin-top: 5px; }
-    .publish-detail .content .comments .msg-title {
+    .publish-detail .content .comments .title {
       height: 32px;
       margin: 8px 8px;
       padding: 8px 8px; }
