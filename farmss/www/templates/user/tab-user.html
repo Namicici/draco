@@ -6,7 +6,7 @@
                 <a class = "button button-icon button-positive icon ion-ios-gear-outline"></a>
             </div>
             <div class = "picture">
-                <img src = "img/user/user-64.png">
+                <img src = "img/user/1-64.png">
             </div>
             <div class = "name">李开封</div>
         </div>
@@ -16,11 +16,31 @@
                     <fs-card data = "data"></fs-card>
                 </div>
             </fs-pane>
-            <fs-pane title = "预约">qqqqq
+            <fs-pane title = "预约">
+                <div ng-repeat = "subscribe in subscribedPublish">
+                    <div class = "item item-thumbnail-left" href="#">
+                        <img src = "img/{{subscribe.img}}">
+                        <h2>{{subscribe.title}}</h2>
+                        <div class = "price">￥{{subscribe.price}}/亩</div>
+                        <p>{{subscribe.description}}</P>
+                    </div>
+                    <div class = "customer-info">
+                        <div>预约人: {{subscribe.customer}}</div>
+                        <div>{{subscribe.address}}</div>
+                        <div>{{subscribe.phone}}</div>
+                    </div>
+                </div>
             </fs-pane>
-            <fs-pane title = "过期">kkkkkk
+            <fs-pane title = "过期">
+                <div ng-repeat = "overdue in overduePublish">
+                    <div class = "item item-thumbnail-left" href="#">
+                        <img src = "img/{{overdue.img}}">
+                        <h2>{{overdue.title}}</h2>
+                        <div class = "price">￥{{overdue.price}}/亩</div>
+                        <p>{{overdue.description}}</P>
+                    </div>
+                </div>
             </fs-pane>
         </fs-tabs>
-
     </ion-content>
 </ion-view>

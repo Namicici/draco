@@ -1,7 +1,12 @@
 angular.module('farmss.controllers')
 
-.controller('nativeDetailCtrl', function($scope, $http, constants, $location){
+.controller('nativeDetailCtrl', function($scope, $http, constants, $location, $ionicHistory){
 
-    console.log("nativeDetailCtrl");
+    $scope.$on("fs.controllers.nativeCtrl.detail", function(scope, data){
+        $scope.currentPublish = data;
+    });
 
+    $scope.goBack = function(){
+        $ionicHistory.goBack();
+    };
 });
