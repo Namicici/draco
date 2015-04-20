@@ -1,6 +1,6 @@
 angular.module('farmss')
 
-.run(function($ionicPlatform) {
+.run(['$ionicPlatform', function($ionicPlatform) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -12,13 +12,13 @@ angular.module('farmss')
             StatusBar.styleDefault();
         }
     });
-})
+}])
 
-.config(function($ionicConfigProvider){
+.config(['$ionicConfigProvider', function($ionicConfigProvider){
     $ionicConfigProvider.tabs.position('bottom');
-})
+}])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
@@ -81,6 +81,6 @@ angular.module('farmss')
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/native');
-});
+}]);
 
 

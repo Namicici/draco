@@ -3937,7 +3937,7 @@ angular.module('farmss.directives', [])
 
 angular.module('farmss')
 
-.run(function($ionicPlatform) {
+.run(['$ionicPlatform', function($ionicPlatform) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -3949,13 +3949,13 @@ angular.module('farmss')
             StatusBar.styleDefault();
         }
     });
-})
+}])
 
-.config(function($ionicConfigProvider){
+.config(['$ionicConfigProvider', function($ionicConfigProvider){
     $ionicConfigProvider.tabs.position('bottom');
-})
+}])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
@@ -4018,13 +4018,13 @@ angular.module('farmss')
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/native');
-});
+}]);
 
 
 
 angular.module('farmss.controllers')
 
-.controller('messageCtrl', function($scope, constants){
+.controller('messageCtrl', ['$scope', 'constants' , function($scope, constants){
 
     $scope.msgTypes = ["预约留言", "消息"];
     $scope.isComment = function(type){
@@ -4059,11 +4059,11 @@ angular.module('farmss.controllers')
         }
     ];
 
-})
+}])
 
 angular.module('farmss.controllers')
 
-.controller('nativeCtrl', function($scope, $rootScope, $http, constants, $location){
+.controller('nativeCtrl', ['$scope', '$rootScope', '$http', 'constants', '$location', function($scope, $rootScope, $http, constants, $location){
 
     $scope.provinces = constants.provinceAndcitiesData.provinces;
     $scope.types = constants.machineType;
@@ -4120,11 +4120,11 @@ angular.module('farmss.controllers')
             $rootScope.$broadcast("fs.controllers.nativeCtrl.detail", data);
         });
     };
-})
+}])
 
 angular.module('farmss.controllers')
 
-.controller('nativeDetailCtrl', function($scope, $http, constants, $location, $ionicHistory){
+.controller('nativeDetailCtrl', ['$scope', '$http', 'constants', '$location', '$ionicHistory', function($scope, $http, constants, $location, $ionicHistory){
 
     $scope.$on("fs.controllers.nativeCtrl.detail", function(scope, data){
         $scope.currentPublish = data;
@@ -4133,11 +4133,11 @@ angular.module('farmss.controllers')
     $scope.goBack = function(){
         $ionicHistory.goBack();
     };
-});
+}]);
 
 angular.module('farmss.controllers')
 
-.controller('publishCtrl', function($scope, $rootScope, constants, $http, $location){
+.controller('publishCtrl', ['$scope', '$rootScope', 'constants', '$http', '$location', function($scope, $rootScope, constants, $http, $location){
 
     $scope.types = constants.machineType;
     $scope.publish = function(title, selMacType, price, startTime, endTime, description){
@@ -4167,11 +4167,11 @@ angular.module('farmss.controllers')
 
     };
 
-});
+}]);
 
 angular.module('farmss.controllers')
 
-.controller('userCtrl', function($scope, constants, $http){
+.controller('userCtrl', ['$scope', 'constants', '$http', function($scope, constants, $http){
 	getUserPublish = function(){
 		var httpConfig = {
 			method: "GET",
@@ -4207,11 +4207,11 @@ angular.module('farmss.controllers')
 	getSubscribed();
 	getOverdue();
 
-});
+}]);
 
 angular.module('farmss.directives')
 
-.directive('fsDropDown', function($ionicModal){
+.directive('fsDropDown', ['$ionicModal', function($ionicModal){
     return {
         restrict: "EA",
         transclude: true,
@@ -4247,7 +4247,7 @@ angular.module('farmss.directives')
         }
     };
 
-});
+}]);
 
 angular.module('farmss.directives')
 
@@ -4275,7 +4275,7 @@ angular.module('farmss.directives')
         },
         templateUrl: "./templates/directives/fs-locate.html",
 
-        controller: function($scope, $ionicModal){
+        controller: ['$scope', '$ionicModal', function($scope, $ionicModal){
             $scope.selected = {"id":1919, "code":"420582", "name":"当阳市"};
 
             initModal = function(){
@@ -4305,7 +4305,7 @@ angular.module('farmss.directives')
             };
 
             $scope.$emit("fs.directives.locate.selected", $scope.selected);
-        }
+        }]
     };
 
 });
@@ -4337,7 +4337,7 @@ angular.module('farmss.directives')
         scope:{},
         templateUrl: "./templates/directives/fs-tabs.html",
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             panes = $scope.panes = [];
             $scope.select = function(pane){
                 angular.forEach(panes, function(pane){
@@ -4352,7 +4352,7 @@ angular.module('farmss.directives')
                 panes.push(pane);
             };
             return true;
-        }
+        }]
     };
 
 });

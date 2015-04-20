@@ -1,3 +1,4 @@
+
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
@@ -5,6 +6,7 @@ var concat = require('gulp-concat');
 var copy = require("gulp-copy");
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var del = require('del');
@@ -14,7 +16,7 @@ var paths = {
     js: ['./www/js/app/*.js', './www/js/app/controllers/*.js', './www/js/app/directives/**/*.js']
 };
 
-gulp.task('default', ['sass', 'scripts', 'concat', 'copy']);
+gulp.task('default', ['sass', 'scripts', 'concat', 'copy', 'minifyCss', 'uglify']);
 
 gulp.task('sass', function(done) {
     gulp.src('./scss/ionic.app.scss')
@@ -36,14 +38,28 @@ gulp.task('concat', function(done){
 });
 
 gulp.task('clean', function(cb){
-    del(['./www/js/app.min.js'], cb);
+    del(['./www/js/app.min.js', './www/js/app.vendor.min.js', './www/css/ionic.app.min.css'], cb);
 });
 
 gulp.task('scripts', ['clean'], function(done){
     gulp.src(paths.js)
-        .pipe(concat('app.min.js'))
+        .pipe(concat('app.vendor.js'))
         .pipe(gulp.dest('./www/js'))
         .on('end', done);
+});
+
+gulp.task('minifyCss',['clean'], function(){
+    gulp.src("./www/css/app.min.css")
+        .pipe(minifyCss())
+        .pipe(gulp.dest('./www/js/'));
+});
+
+gulp.task('uglify',  ['clean'], function(){
+    gulp.src("./www/js/app.vendor.js")
+        .pipe(gulp.dest("./www/js/"))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest("./www/js/"));
 });
 
 gulp.task('copy', function(done){

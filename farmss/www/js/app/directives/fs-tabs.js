@@ -7,7 +7,7 @@ angular.module('farmss.directives')
         scope:{},
         templateUrl: "./templates/directives/fs-tabs.html",
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             panes = $scope.panes = [];
             $scope.select = function(pane){
                 angular.forEach(panes, function(pane){
@@ -22,7 +22,7 @@ angular.module('farmss.directives')
                 panes.push(pane);
             };
             return true;
-        }
+        }]
     };
 
 });

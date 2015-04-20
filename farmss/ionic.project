@@ -6,6 +6,8 @@
     "scripts",
     "concat",
     "copy",
+    "uglify",
+    "minifyCss",
     "watch"
   ],
   "watchPatterns": [

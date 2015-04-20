@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('messageCtrl', function($scope, constants){
+.controller('messageCtrl', ['$scope', 'constants' , function($scope, constants){
 
     $scope.msgTypes = ["预约留言", "消息"];
     $scope.isComment = function(type){
@@ -35,4 +35,4 @@ angular.module('farmss.controllers')
         }
     ];
 
-})
+}])

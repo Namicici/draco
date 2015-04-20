@@ -1,6 +1,6 @@
 angular.module('farmss.directives')
 
-.directive('fsDropDown', function($ionicModal){
+.directive('fsDropDown', ['$ionicModal', function($ionicModal){
     return {
         restrict: "EA",
         transclude: true,
@@ -36,4 +36,4 @@ angular.module('farmss.directives')
         }
     };
 
-});
+}]);

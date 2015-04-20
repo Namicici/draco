@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('nativeCtrl', function($scope, $rootScope, $http, constants, $location){
+.controller('nativeCtrl', ['$scope', '$rootScope', '$http', 'constants', '$location', function($scope, $rootScope, $http, constants, $location){
 
     $scope.provinces = constants.provinceAndcitiesData.provinces;
     $scope.types = constants.machineType;
@@ -57,4 +57,4 @@ angular.module('farmss.controllers')
             $rootScope.$broadcast("fs.controllers.nativeCtrl.detail", data);
         });
     };
-})
+}])

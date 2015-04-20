@@ -9,7 +9,7 @@ angular.module('farmss.directives')
         },
         templateUrl: "./templates/directives/fs-locate.html",
 
-        controller: function($scope, $ionicModal){
+        controller: ['$scope', '$ionicModal', function($scope, $ionicModal){
             $scope.selected = {"id":1919, "code":"420582", "name":"当阳市"};
 
             initModal = function(){
@@ -39,7 +39,7 @@ angular.module('farmss.directives')
             };
 
             $scope.$emit("fs.directives.locate.selected", $scope.selected);
-        }
+        }]
     };
 
 });

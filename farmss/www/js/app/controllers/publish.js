@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('publishCtrl', function($scope, $rootScope, constants, $http, $location){
+.controller('publishCtrl', ['$scope', '$rootScope', 'constants', '$http', '$location', function($scope, $rootScope, constants, $http, $location){
 
     $scope.types = constants.machineType;
     $scope.publish = function(title, selMacType, price, startTime, endTime, description){
@@ -30,4 +30,4 @@ angular.module('farmss.controllers')
 
     };
 
-});
+}]);

@@ -1,6 +1,6 @@
 angular.module('farmss.controllers')
 
-.controller('userCtrl', function($scope, constants, $http){
+.controller('userCtrl', ['$scope', 'constants', '$http', function($scope, constants, $http){
 	getUserPublish = function(){
 		var httpConfig = {
 			method: "GET",
@@ -36,4 +36,4 @@ angular.module('farmss.controllers')
 	getSubscribed();
 	getOverdue();
 
-});
+}]);

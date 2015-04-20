@@ -1,6 +1,6 @@
 angular.module('farmss.services', ["ngMockE2E"])
 
-.run(function($httpBackend){
+.run(['$httpBackend',function($httpBackend){
 
     $httpBackend.whenGET(/tab\//).passThrough();
     $httpBackend.whenGET(/templates\//).passThrough();
@@ -368,4 +368,4 @@ angular.module('farmss.services', ["ngMockE2E"])
         description: "",
         commentDetail: []
     }]);
-});
+}]);
