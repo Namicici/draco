@@ -10,71 +10,16 @@
     <ion-content class = "content">
         <div  class = "pool" direction="x">
             <ion-list>
-                <div class = "pool-item">
+                <div class = "pool-item" ng-repeat = "pool in pools">
                     <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                        <ion-slide>
+                        <ion-slide ng-repeat = "fish in pool.fish">
                             <div class="box">
-                                <img src = "img/aircraft.jpg">
-                                <div class = "text">无人机喷药灭虫</div>
-                            </div>
-                        </ion-slide>
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/tuolaji.jpg">
-                                <div class = "text">拖拉机</div>
-                            </div>
-                        </ion-slide>
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/aircraft5.jpg">
-                                <div class = "text">无人机灭虫</div>
+                                <img src = "img/{{fish.img}}">
+                                <div class = "text">{{fish.text}}</div>
                             </div>
                         </ion-slide>
                     </ion-slide-box>
-                    <hr/>
-                    <div class = "pool-locate">黄林村</div>
-                </div>
-                <div class = "pool-item">
-                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/aircraft2.jpg">
-                                <div class = "text">无人机灭虫</div>
-                            </div>
-                        </ion-slide>
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/aircraft4.jpg">
-                                <div class = "text">无人机灭虫</div>
-                            </div>
-                        </ion-slide>
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/aircraft3.jpg">
-                                <div class = "text">无人飞机喷药</div>
-                            </div>
-                        </ion-slide>
-                    </ion-slide-box>
-                    <hr/>
-                    <div class = "pool-locate">鲁山村</div>
-                </div>
-                <div class = "pool-item">
-                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/geguji.jpg">
-                                <div class = "text">割谷</div>
-                            </div>
-                        </ion-slide>
-                        <ion-slide>
-                            <div class="box">
-                                <img src = "img/chayang.jpg">
-                                <div class = "text">插秧</div>
-                            </div>
-                        </ion-slide>
-                    </ion-slide-box>
-                    <hr/>
-                    <div class = "pool-locate">许二村</div>
+                    <div class = "pool-locate">{{pool.name}}</div>
                 </div>
                 <div class = "pool-item">
                     <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
@@ -85,7 +30,6 @@
                             </div>
                         </ion-slide>
                     </ion-slide-box>
-                    <hr/>
                     <div class = "pool-locate">添加新村</div>
                 </div>
             </ion-list>

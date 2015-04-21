@@ -4076,6 +4076,18 @@ angular.module('farmss.controllers')
         sort: 3
     };
 
+    getAllPoolInfo = function(){
+        var httpConfig = {
+            method: "GET",
+            url: "api/native/allpool"
+        };
+        $http(httpConfig).success(function(data){
+            $scope.pools = data;
+        });
+    };
+    
+    getAllPoolInfo();
+
     getAllNativePublish = function(){
         var httpConfig = {
             method: "GET",

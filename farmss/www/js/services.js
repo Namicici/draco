@@ -30,6 +30,49 @@ angular.module('farmss.services', ["ngMockE2E"])
         ]
     };
 
+    var pools = [
+        {
+            name: "黄林村",
+            fish:[
+                {
+                    img: "aircraft.jpg",
+                    text: "无人机喷药灭虫"
+                },{
+                    img: "tuolaji.jpg",
+                    text: "拖拉机"
+                },{
+                    img: "aircraft5.jpg",
+                    text: "无人机灭虫"
+                }
+            ]
+        },{
+            name: "鲁山村",
+            fish: [
+                {
+                    img:"aircraft2.jpg",
+                    text:"无人机灭虫"
+                },{
+                    img:"aircraft4.jpg",
+                    text:"无人机灭虫"
+                },{
+                    img:"aircraft3.jpg",
+                    text:"无人飞机喷药"
+                }
+            ]
+        },{
+            name:"许二村",
+            fish:[
+                {
+                    img:"geguji.jpg",
+                    text:"割谷"
+                },{
+                    img:"chayang.jpg",
+                    text:"插秧"
+                }
+            ]
+        }
+    ];
+
     var allNativePublish = [
         {
             publishId: "130",
@@ -140,6 +183,8 @@ angular.module('farmss.services', ["ngMockE2E"])
     ];
 
     $httpBackend.whenGET("api/native/allpublish").respond(allNativePublish);
+    $httpBackend.whenGET("api/native/allpool").respond(pools);
+
     $httpBackend.when("PUT", "api/publish").respond(function(method, url, data, headers){
         allNativePublish.push(data);
         return allNativePublish;

@@ -7618,19 +7618,22 @@ a.button {
   background-color: #D5D8D2; }
   .native .content .pool {
     margin-top: 49px;
-    white-space: nowrap;
-    overflow: auto; }
+    white-space: nowrap; }
     .native .content .pool .pool-item {
       width: 130px;
-      height: 170px;
+      height: 162px;
       display: inline-block;
-      background-color: white; }
+      background-color: white;
+      padding: 0 2px; }
       .native .content .pool .pool-item .pool-img {
         height: 130px; }
       .native .content .pool .pool-item .pool-locate {
-        height: 40px;
+        height: 32px;
         width: 100%;
-        display: inline-blck; }
+        display: inline-blck;
+        padding: 8px 0;
+        margin-top: 5px;
+        background-color: rgba(141, 199, 122, 0.31); }
       .native .content .pool .pool-item .box img {
         min-width: 100%;
         max-width: 100%;

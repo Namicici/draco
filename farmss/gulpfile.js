@@ -71,6 +71,8 @@ gulp.task('copy', function(done){
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.js, ['scripts']);
+    gulp.watch("./www/css", ['minifyCss']);
+    gulp.watch(paths.js, ['uglify']);
 });
 
 gulp.task('install', ['git-check'], function() {
