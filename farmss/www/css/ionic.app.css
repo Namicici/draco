@@ -7823,34 +7823,45 @@ a.button {
 
 .publish-detail {
   background-color: #D5D8D2; }
-  .publish-detail .content .detail-img {
-    height: 300px;
-    width: 100%; }
-  .publish-detail .content .simple-info {
-    background-color: white;
-    height: 32px;
-    border-bottom: solid 1px #5BBD72; }
-    .publish-detail .content .simple-info .price {
-      padding: 8px 8px; }
-  .publish-detail .content .owner-info {
-    height: 64px; }
-  .publish-detail .content .description {
-    background-color: white;
-    margin-top: 12px;
-    padding: 8px 5px; }
-  .publish-detail .content .location {
-    background-color: white;
-    padding: 5px 5px; }
-    .publish-detail .content .location .location-text {
-      background-color: #f8f8f8;
-      height: 20px;
-      border-radius: 3px;
-      white-space: nowrap;
+  .publish-detail .content {
+    display: block; }
+    .publish-detail .content .detail-img {
+      width: 100%;
+      height: 300px;
       padding: 2px 5px; }
-  .publish-detail .content .comments {
-    background-color: white;
-    margin-top: 5px; }
-    .publish-detail .content .comments .title {
+      .publish-detail .content .detail-img img {
+        text-align: center;
+        width: 100%;
+        height: 300px; }
+    .publish-detail .content .simple-info {
+      background-color: white;
       height: 32px;
-      margin: 8px 8px;
-      padding: 8px 8px; }
+      border-bottom: solid 1px #5BBD72; }
+      .publish-detail .content .simple-info .price {
+        padding: 8px 8px; }
+    .publish-detail .content .owner-info {
+      height: 64px; }
+    .publish-detail .content .info {
+      background-color: white;
+      display: block; }
+      .publish-detail .content .info .description {
+        margin-top: 12px;
+        padding: 8px 5px; }
+      .publish-detail .content .info .location {
+        padding: 5px 5px; }
+        .publish-detail .content .info .location .location-text {
+          background-color: #f8f8f8;
+          height: 20px;
+          border-radius: 3px;
+          white-space: nowrap;
+          padding: 2px 5px; }
+      .publish-detail .content .info .book {
+        text-align: right;
+        padding: 5px 8px; }
+    .publish-detail .content .comments {
+      background-color: white;
+      margin-top: 5px; }
+      .publish-detail .content .comments .title {
+        height: 32px;
+        margin: 8px 8px;
+        padding: 8px 8px; }

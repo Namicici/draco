@@ -1,9 +1,16 @@
 .publish-detail{
     background-color: $backgroundColor;
     .content{
+        display: block;
         .detail-img{
-        	height: 300px;
-        	width: 100%;
+            width: 100%;
+            height: 300px;
+            padding: 2px 5px;
+            img{
+                text-align: center;
+                width: 100%;
+                height: 300px;
+            }
         }
         .simple-info{
             background-color: white;
@@ -16,20 +23,26 @@
         .owner-info{
             height: 64px;
         }
-        .description{
+        .info{
             background-color: white;
-            margin-top: 12px;
-            padding: 8px 5px;
-        }
-        .location{
-            background-color: white;
-            padding: 5px 5px;
-            .location-text{
-                background-color: $stable;
-                height: 20px;
-                border-radius: 3px;
-                white-space: nowrap;
-                padding: 2px 5px;
+            display: block;
+            .description{
+                margin-top: 12px;
+                padding: 8px 5px;
+            }
+            .location{
+                padding: 5px 5px;
+                .location-text{
+                    background-color: $stable;
+                    height: 20px;
+                    border-radius: 3px;
+                    white-space: nowrap;
+                    padding: 2px 5px;
+                }
+            }
+            .book{
+                text-align: right;
+                padding: 5px 8px;
             }
         }
         .comments{

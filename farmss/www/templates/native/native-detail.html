@@ -1,8 +1,4 @@
 <ion-view view-title="详情" class = "publish-detail">
-    <!--ion-nav-bar class="bar-positive">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
-    </ion-nav-bar-->
     <div class="bar bar-header item-input-inset bar-positive">
         <button class = "button  button-large button-clear ion-ios-arrow-left" ng-click = "goBack()"></button>
         <h1 class = "title">详情</h1>
@@ -10,19 +6,9 @@
 
 	<ion-content class = "content">
 		<ion-slide-box>
-			<ion-slide>
+			<ion-slide ng-repeat = "picture in currentPublish.img">
 				<div class = "detail-img">
-					<img src = "img/aircraft.jpg"/>
-				</div>
-			</ion-slide>
-			<ion-slide>
-				<div class = "detail-img">
-					<img src = "img/aircraft2.jpg"/>
-				</div>
-			</ion-slide>
-			<ion-slide>
-				<div class = "detail-img">
-					<img src = "img/aircraft5.jpg"/>
+					<img src = "img/{{picture}}"/>
 				</div>
 			</ion-slide>
 		</ion-slide-box>
@@ -36,13 +22,18 @@
                 <div class = "text">{{currentPublish.area}}</div>
             </a>
         </div>
-        <div class = "description">
-            <span>{{currentPublish.description}}</span>
-        </div>
-        <div class = "location">
-            <span class = "location-text ion-android-compass">
-                {{currentPublish.area}}.{{currentPublish.village}}
-            </span>
+        <div class = "info">
+            <div class = "description">
+                <span>{{currentPublish.description}}</span>
+            </div>
+            <div class = "location">
+                <span class = "location-text ion-android-compass">
+                    {{currentPublish.area}}.{{currentPublish.village}}
+                </span>
+            </div>
+            <div class = "book">
+                <button class = "button button-small button-positive">预约</button>
+            </div>
         </div>
         <div class = "comments" ng-if = "currentPublish.commentDetail.length > 0">
             <div class = "title">留言</div>

@@ -66,7 +66,7 @@ angular.module('farmss.services', ["ngMockE2E"])
                     img:"geguji.jpg",
                     text:"割谷"
                 },{
-                    img:"chayang.jpg",
+                    img:"chayang2.jpg",
                     text:"插秧"
                 }
             ]
@@ -201,7 +201,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 10,
         title: "无人飞机喷药灭虫",
         price: 20,
-        img: "aircraft.jpg",
+        img: ["aircraft.jpg", "penyao1.jpg"],
         area: "当阳市",
         village: "黄林村",
         publishTime: "2015-04-27",
@@ -234,7 +234,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 1,
         title: "机械耕田",
         price: 30,
-        img: "tuolaji.jpg",
+        img: ["tuolaji.jpg"],
         area: "当阳市",
         village: "黄林村",
         publishTime: "2015-04-27",
@@ -260,7 +260,7 @@ angular.module('farmss.services', ["ngMockE2E"])
                 time: "17:05",
                 words: "OK!"
             }
-        ]               
+        ]
     });
     $httpBackend.whenGET("api/publish/detail/240").respond({
         publishId: "240",
@@ -273,7 +273,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 1,
         title: "机械插秧",
         price: 30,
-        img: "chayang.jpg",
+        img: ["chayang2.jpg"],
         area: "当阳市",
         village: "黄林村",
         publishTime: "2015-04-27",
@@ -292,7 +292,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 15,
         title: "无人飞机喷药灭虫",
         price: 30,
-        img: "aircraft2.jpg",
+        img: ["aircraft2.jpg"],
         area: "当阳市",
         village: "黄林村",
         publishTime: "2015-04-27",
@@ -311,7 +311,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 15,
         title: "机械割谷",
         price: 50,
-        img: "geguji.jpg",
+        img: ["geguji.jpg"],
         area: "当阳市",
         village: "黄林村",
         publishTime: "2015-04-27",
@@ -330,7 +330,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 15,
         title: "机械割谷",
         price: 50,
-        img: "geguji.jpg",
+        img: ["geguji.jpg"],
         area: "远安县",
         village: "河口乡",
         publishTime: "2015-04-27",
@@ -349,7 +349,7 @@ angular.module('farmss.services', ["ngMockE2E"])
         share: 15,
         title: "无人飞机喷药灭虫",
         price: 30,
-        img: "aircraft2.jpg",
+        img: ["aircraft2.jpg"],
         area: "远安县",
         village: "河口乡",
         publishTime: "2015-04-27",
