@@ -7831,7 +7831,8 @@ a.button {
       padding: 2px 5px; }
       .publish-detail .content .detail-img img {
         text-align: center;
-        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
         height: 300px; }
     .publish-detail .content .simple-info {
       background-color: white;
