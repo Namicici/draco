@@ -1,0 +1,63 @@
+<ion-view class = "native">
+    <div class="bar bar-header item-input-inset bar-positive">
+        <fs-locate items = "provinces"></fs-locate>
+        <label class="item-input-wrapper">
+            <i class="icon icon-positive ion-ios-search-strong placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model = "searchText">
+        </label>
+    </div>
+
+    <ion-content class = "content">
+        <div  class = "pool" direction="x">
+            <ion-list>
+                <div class = "pool-item" ng-repeat = "pool in pools">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide ng-repeat = "fish in pool.fish">
+                            <div class="box">
+                                <img src = "img/{{fish.img}}">
+                                <div class = "text">{{fish.text}}</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <div class = "pool-locate">{{pool.name}}</div>
+                </div>
+                <div class = "pool-item">
+                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <div class="box">
+                                <img src = "img/default.jpg">
+                                <div>Add</div>
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <div class = "pool-locate">添加新村</div>
+                </div>
+            </ion-list>
+        </div>
+
+        <div class = "collection">
+            <div class = "sort-header">
+                <fs-drop-down class = "filter-place" items = "places" selected = "selPlace"></fs-drop-down>
+                <fs-drop-down class = "filter-type" items = "types" selected = "selMacType"></fs-drop-down>
+                <fs-drop-down class = "filter-sort" items = "sorts" selected = "selSort"></fs-drop-down>
+            </div>
+
+            <div class = "clause">
+                <div class = "list">
+                    <div ng-repeat = "publish in publishes | filter: searchText | filter: {area: locatePlace} | filter: {village: filterPlace(selPlace)} | filter: {machineType: filterMacType(selMacType)}">
+                        <ion-nav-view name="native-detail"></ion-nav-view>
+                        <a class = "item item-thumbnail-left" href="#/tab/detail" ng-click = "detail(publish)">
+                            <img src = "img/{{publish.img}}"/>
+                            <div class = "title">{{publish.title}}</div>
+                            <div class = "price">￥{{publish.price}}/亩</div>
+                            <div class = "location">{{publish.area}}.{{publish.village}}</div>
+                            <div class = "book">
+                                <button class = "button button-small button-positive">预约</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

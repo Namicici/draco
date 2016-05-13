@@ -1,0 +1,28 @@
+<div class = "fs-locate">
+    <ion-modal-view>
+        <ion-content>
+            <div class="bar bar-header item-input-inset">
+              <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" ng-model = "searchText">
+              </label>
+              <button class="button button-clear" ng-click = "cancel()">取消</button>
+            </div>
+            <ul>
+                <li ng-repeat = "province in items | filter: searchText">
+                    <div class = "province">{{province.name}}</div>
+                    <ul>
+                        <li ng-repeat = "city in province.cities | filter: searchText">
+                            <div class = "city">{{city.name}}</div>
+                            <ul>
+                                <li ng-repeat = "area in city.areas | filter: searchText">
+                                    <div class = "area" ng-click = "locateArea(area)">{{area.name}}</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </ion-content>
+    </ion-modal-view>
+</div>

@@ -1,0 +1,98 @@
+$primary: white;//#8AC007;
+$gap: 5px;
+
+.native{
+    background-color: $backgroundColor;
+    .content{
+        .pool{
+            margin-top: $bar-height + $gap;
+            white-space: nowrap;
+            //overflow: auto;
+            .pool-item{
+                width: 130px;
+                height: 162px;
+                display: inline-block;
+                background-color: $primary;
+                padding: 0 2px;
+                .pool-img{
+                    height: 130px;
+                }
+                .pool-locate{
+                    height: 32px;
+                    width: 100%;
+                    display: inline-blck;
+                    padding: 8px 0;
+                    margin-top: 5px;
+                    background-color: rgba(141, 199, 122, 0.31);
+                }
+                .box{
+                    img{
+                        min-width:100%;
+                        max-width:100%;
+                        min-height: 110px;
+                    }
+                }
+            }
+        }
+        .collection{
+            background-color: white;
+            margin-top: $gap;
+            .sort-header{
+                background-color: white;
+                //top: 10px;
+                width: 100%;
+                //margin: 0 3.3% 0 3.3%;
+                height: 32px;
+                border-bottom: solid 1px $borderColor;
+                .filter-place{
+                    width: 32%;
+                    height: 31px;
+                    display: inline-block;
+                    border-right: solid 1px;
+                    border-color: $borderColor;
+                    position: relative;
+                    text-align: center;
+                }
+                .filter-type{
+                    width: 32%;
+                    height: 31px;
+                    display: inline-block;
+                    border-right: solid 1px;
+                    border-color: $borderColor;
+                    position: relative;
+                    text-align: center;
+                }
+                .filter-sort{
+                    width: 32%;
+                    height: 31px;
+                    display: inline-block;
+                    border: none;
+                    border-color: $borderColor;
+                    position: relative;
+                    text-align: center;
+                }
+            }
+            .clause{
+                .list{
+                    a{
+                        .location{
+                            margin-top: 10px;
+                            display: block;
+                            font-size: 12px;
+                            color: gray;
+                        }
+                        .book{
+                            display: block;
+                            float: right;
+                        }
+                        .price{
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

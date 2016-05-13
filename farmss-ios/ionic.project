@@ -1,0 +1,17 @@
+{
+  "name": "farmss",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "scripts",
+    "concat",
+    "copy",
+    "uglify",
+    "minifyCss",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "www/lib/**/*"
+  ]
+}
