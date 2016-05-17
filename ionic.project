@@ -6,12 +6,12 @@
     "scripts",
     "concat",
     "copy",
-    "uglify",
     "minifyCss",
     "watch"
   ],
   "watchPatterns": [
     "www/**/*",
     "www/lib/**/*"
-  ]
+  ],
+  "documentRoot": "./dist"
 }

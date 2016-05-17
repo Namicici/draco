@@ -6,7 +6,7 @@ angular.module('farmss.controllers')
     $scope.types = constants.machineType;
     $scope.sorts = constants.sortType;
 
-    $scope.places = ["不限", "黄林村", "半月", "河溶"];
+    $scope.places = ["不限", "黄林村",  "半月", "河溶"];
     $scope.selCol = {
         place: 1,
         macType: 2,
@@ -22,7 +22,7 @@ angular.module('farmss.controllers')
             $scope.pools = data;
         });
     };
-    
+
     getAllPoolInfo();
 
     getAllNativePublish = function(){

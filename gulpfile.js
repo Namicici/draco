@@ -16,63 +16,59 @@ var paths = {
     js: ['./www/js/app/*.js', './www/js/app/controllers/*.js', './www/js/app/directives/**/*.js']
 };
 
-gulp.task('default', ['sass', 'scripts', 'concat', 'copy', 'minifyCss', 'uglify']);
+gulp.task('default', ["copy", 'sass', 'concat', "scripts"]);
 
 gulp.task('sass', function(done) {
-    gulp.src('./scss/ionic.app.scss')
+    return gulp.src('./scss/ionic.app.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./www/css/'))
         .pipe(minifyCss({
           keepSpecialComments: 0
         }))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./www/css/'))
-        .on('end', done);
+        .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('concat', function(done){
-    gulp.src(['./node_modules/semantic-ui-css/semantic.min.css', './node_modules/semantic-ui-icon/icon.min.js'])
+    return gulp.src(['./node_modules/semantic-ui-css/semantic.min.css', './node_modules/semantic-ui-icon/icon.min.js'])
         .pipe(concat('style.css'))
-        .pipe(gulp.dest('./www/css/'))
-        .on('end', done);
+        .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('clean', function(cb){
-    del(['./www/js/app.min.js', './www/js/app.vendor.min.js', './www/css/ionic.app.min.css'], cb);
+    del(['./dist/**/*.*', './dist/*.*'], cb);
 });
 
-gulp.task('scripts', ['clean'], function(done){
-    gulp.src(paths.js)
+gulp.task('scripts', function(done){
+    return gulp.src(['./www/js/app/*.js', './www/js/app/controllers/*.js', './www/js/app/directives/**/*.js'])
         .pipe(concat('app.vendor.js'))
-        .pipe(gulp.dest('./www/js'))
-        .on('end', done);
-});
-
-gulp.task('minifyCss',['clean'], function(){
-    gulp.src("./www/css/app.min.css")
-        .pipe(minifyCss())
-        .pipe(gulp.dest('./www/js/'));
-});
-
-gulp.task('uglify',  ['clean'], function(){
-    gulp.src("./www/js/app.vendor.js")
-        .pipe(gulp.dest("./www/js/"))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest("./www/js/"));
+        .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('copy', function(done){
     gulp.src("./node_modules/semantic-ui-css/themes/**/*.*")
-        .pipe(gulp.dest('./www/css/themes/'))
-        .on('end', done);
+        .pipe(gulp.dest('./dist/themes/'))
+
+    gulp.src("./www/lib/**/*")
+    .pipe(gulp.dest("./dist/lib"))
+
+    gulp.src("./www/js/services.js")
+    .pipe(gulp.dest("./dist/"))
+
+    gulp.src(["./www/templates/**/*", "./www/templates/*"])
+    .pipe(gulp.dest("./dist/templates"))
+
+    gulp.src(["./www/img/**/*", "./www/img/*"])
+    .pipe(gulp.dest("./dist/img"))
+
+    return gulp.src("./www/index.html")
+        .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.js, ['scripts']);
-    gulp.watch("./www/css", ['minifyCss']);
-    gulp.watch(paths.js, ['uglify']);
+    //gulp.watch("./www/css", ['minifyCss']);
+    //gulp.watch(paths.js, ['uglify']);
 });
 
 gulp.task('install', ['git-check'], function() {
