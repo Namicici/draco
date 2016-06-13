@@ -11,7 +11,7 @@
         <div  class = "pool" direction="x">
             <ion-list>
                 <div class = "pool-item" ng-repeat = "pool in pools">
-                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                    <ion-slide-box class = "pool-img" auto-play = "true" does-continue="true">
                         <ion-slide ng-repeat = "fish in pool.fish">
                             <div class="box">
                                 <img src = "img/{{fish.img}}">
@@ -22,7 +22,7 @@
                     <div class = "pool-locate">{{pool.name}}</div>
                 </div>
                 <div class = "pool-item">
-                    <ion-slide-box class = "pool-img" auto-play = "true" on-slide-changed="slideHasChanged($index)">
+                    <ion-slide-box class = "pool-img" auto-play = "true" does-continue="true">
                         <ion-slide>
                             <div class="box">
                                 <img src = "img/default.jpg">

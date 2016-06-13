@@ -4,33 +4,26 @@ var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
 var copy = require("gulp-copy");
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var del = require('del');
+var mergeStream = require('merge-stream');
+var cleanCss = require("gulp-clean-css");
 
 var paths = {
     sass: ['./scss/**/*.scss'],
     js: ['./www/js/app/*.js', './www/js/app/controllers/*.js', './www/js/app/directives/**/*.js']
 };
 
-gulp.task('default', ["copy", 'sass', 'concat', "scripts"]);
+gulp.task('default', ["copy", 'sass', "scripts"]);
 
 gulp.task('sass', function(done) {
-    return gulp.src('./scss/ionic.app.scss')
-        .pipe(sass())
-        .pipe(minifyCss({
-          keepSpecialComments: 0
-        }))
-        .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./dist/'))
-});
-
-gulp.task('concat', function(done){
-    return gulp.src(['./node_modules/semantic-ui-css/semantic.min.css', './node_modules/semantic-ui-icon/icon.min.js'])
-        .pipe(concat('style.css'))
+    return sass('./scss/ionic.app.scss',{noCache:true})
+        .on('error', sass.logError)
+        .pipe(rename('ionic.app.min.css'))
         .pipe(gulp.dest('./dist/'))
 });
 
@@ -45,23 +38,23 @@ gulp.task('scripts', function(done){
 });
 
 gulp.task('copy', function(done){
-    gulp.src("./node_modules/semantic-ui-css/themes/**/*.*")
-        .pipe(gulp.dest('./dist/themes/'))
+    return mergeStream(
 
-    gulp.src("./www/lib/**/*")
-    .pipe(gulp.dest("./dist/lib"))
+        gulp.src("./www/lib/**/*")
+        .pipe(gulp.dest("./dist/lib")),
 
-    gulp.src("./www/js/services.js")
-    .pipe(gulp.dest("./dist/"))
+        gulp.src("./www/js/services.js")
+        .pipe(gulp.dest("./dist/")),
 
-    gulp.src(["./www/templates/**/*", "./www/templates/*"])
-    .pipe(gulp.dest("./dist/templates"))
+        gulp.src(["./www/templates/**/*", "./www/templates/*"])
+        .pipe(gulp.dest("./dist/templates")),
 
-    gulp.src(["./www/img/**/*", "./www/img/*"])
-    .pipe(gulp.dest("./dist/img"))
+        gulp.src(["./www/img/**/*", "./www/img/*"])
+        .pipe(gulp.dest("./dist/img")),
 
-    return gulp.src("./www/index.html")
-        .pipe(gulp.dest('./dist/'))
+        gulp.src("./www/index.html")
+            .pipe(gulp.dest('./dist/'))
+    )
 });
 
 gulp.task('watch', function() {
