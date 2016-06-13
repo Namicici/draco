@@ -7,14 +7,15 @@ $gap: 2px;
         .pool{
             margin-top: $bar-height + $gap;
             white-space: nowrap;
+            height: 170px;
             //overflow: auto;
             .pool-item{
                 width: 130px;
                 display: inline-block;
                 background-color: $primary;
-                padding: 0 2px;
+                padding:0 2px 0 0;
                 .pool-img{
-                    height: 158px;
+                    height: 168px;
                 }
                 .pool-locate{
                     position: absolute;
@@ -28,7 +29,7 @@ $gap: 2px;
                     img{
                         min-width:100%;
                         max-width:100%;
-                        min-height: 162px;
+                        min-height: 168px;
                         //height: 100%;
                     }
                     .text{
