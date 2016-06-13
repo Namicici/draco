@@ -1,5 +1,5 @@
 $primary: white;//#8AC007;
-$gap: 5px;
+$gap: 2px;
 
 .native{
     background-color: $backgroundColor;
@@ -10,26 +10,34 @@ $gap: 5px;
             //overflow: auto;
             .pool-item{
                 width: 130px;
-                height: 162px;
                 display: inline-block;
                 background-color: $primary;
                 padding: 0 2px;
                 .pool-img{
-                    height: 130px;
+                    height: 158px;
                 }
                 .pool-locate{
-                    height: 32px;
-                    width: 100%;
-                    display: inline-blck;
-                    padding: 8px 0;
-                    margin-top: 5px;
-                    background-color: rgba(141, 199, 122, 0.31);
+                    position: absolute;
+                    top: 0;
+                    color: initial;
+                    font-weight: bold;
+                    background: floralwhite;
+                    opacity: 0.5;
                 }
                 .box{
                     img{
                         min-width:100%;
                         max-width:100%;
-                        min-height: 110px;
+                        min-height: 162px;
+                        //height: 100%;
+                    }
+                    .text{
+                        position: absolute;
+                        bottom: 0px;
+                        left:0;
+                        right: 0;
+                        background: ivory;
+                        opacity: 0.5;
                     }
                 }
             }
@@ -94,5 +102,3 @@ $gap: 5px;
         }
     }
 }
-
-
