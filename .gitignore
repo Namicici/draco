@@ -4,9 +4,5 @@
 node_modules/
 platforms/
 plugins/
-/css
-/img
-/js
-/lib
-/templates
-/dist
+dist/
+hooks/

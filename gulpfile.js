@@ -58,8 +58,8 @@ gulp.task('copy', function(done){
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.sass, ['sass']);
-    gulp.watch(paths.js, ['scripts']);
+    gulp.watch(paths.sass, ['default']);
+    gulp.watch(paths.js, ['default']);
     //gulp.watch("./www/css", ['minifyCss']);
     //gulp.watch(paths.js, ['uglify']);
 });
